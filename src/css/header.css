@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.lower-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.left-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-lower-div {
+    display: flex;
+    flex-direction: row;
+}
+.right-lang-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.lang-button {
+    margin: 5px 5px;
+    padding: 5px 12px;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    /*align-self: stretch;*/
+}
+.lang-button img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 3px;
+    vertical-align: middle;
+} 
+.lang-button span {
+    vertical-align: middle;
+    margin: 0;
+}
+.city-window {
+    display: none;
+}
+.logo {
+    width: 100px;
+}
+.container {
+    display: flex;
+    flex-direction: row; /* Sets main axis as horizontal */
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically */
+    /* flex-wrap: wrap; // Uncomment this to enable wrapping */
+  }
