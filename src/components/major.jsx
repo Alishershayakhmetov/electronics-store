@@ -1,5 +1,6 @@
 import phone from '../assets/phone.png';
 import ad from '../assets/ad.png';
+import fridge from '../assets/fridge.png';
 
 export default function Major() {
   return(
@@ -25,14 +26,139 @@ export default function Major() {
         </section>
       </section>
 
-      <section>
-        <div>
-
+      <div className="choose-product">
+        <div className="button-set">
+          <div className="button-block">
+            <button className="btn btn-outline-secondary category-button">
+              <span className="button-text">Popular</span> 
+            </button>
+          </div>
+          <div className="button-block">
+            <button className="btn btn-outline-secondary category-button">
+              <span className="button-text">Phones</span> 
+            </button>
+          </div>
+          <div className="button-block">
+            <button className="btn btn-outline-secondary category-button">
+              <span className="button-text">Computers</span> 
+            </button>
+          </div>
+          <div className="button-block">
+            <button className="btn btn-outline-secondary category-button">
+              <span className="button-text">Fridges</span> 
+            </button>
+          </div>
+          <div className="button-block">
+            <button className="btn btn-outline-secondary category-button">
+              <span className="button-text">Vacuum cleaners</span> 
+            </button>
+          </div>
+          <div className="button-block">
+            <button className="btn btn-outline-secondary category-button">
+              <span className="button-text">Wash machines</span> 
+            </button>
+          </div>
         </div>
-        <div>
 
+        <div className="grid-product-block">
+          <a href="/fridge" className="clear-default-a">
+            <div className="grid-item-block">
+              <div className="img-block">
+                <img src={fridge} className="product-img"/>
+              </div>
+              <div className="description-block">
+                <span className="description">Toshiba Fridge GR-RB449WE-PMJ(06)</span>
+                <h2 className="price">359 990 ₸</h2>
+              </div>
+              <div className="center-button">
+                <button className="good-button btn btn-success">
+                  <span className="button-text">Buy</span> 
+                </button>
+              </div>
+            </div>
+          </a>
+          <a href="/fridge" className="clear-default-a">
+            <div className="grid-item-block">
+              <div className="img-block">
+                <img src={fridge} className="product-img"/>
+              </div>
+              <div className="description-block">
+                <span className="description">Toshiba Fridge GR-RB449WE-PMJ(06)</span>
+                <h2 className="price">359 990 ₸</h2>
+              </div>
+              <div className="center-button">
+                <button className="good-button btn btn-success">
+                  <span className="button-text">Buy</span> 
+                </button>
+              </div>
+            </div>
+          </a>
+          <a href="/fridge" className="clear-default-a">
+            <div className="grid-item-block">
+              <div className="img-block">
+                <img src={fridge} className="product-img"/>
+              </div>
+              <div className="description-block">
+                <span className="description">Toshiba Fridge GR-RB449WE-PMJ(06)</span>
+                <h2 className="price">359 990 ₸</h2>
+              </div>
+              <div className="center-button">
+                <button className="good-button btn btn-success">
+                  <span className="button-text">Buy</span> 
+                </button>
+              </div>
+            </div>
+          </a>
+          <a href="/fridge" className="clear-default-a">
+            <div className="grid-item-block">
+              <div className="img-block">
+                <img src={fridge} className="product-img"/>
+              </div>
+              <div className="description-block">
+                <span className="description">Toshiba Fridge GR-RB449WE-PMJ(06)</span>
+                <h2 className="price">359 990 ₸</h2>
+              </div>
+              <div className="center-button">
+                <button className="good-button btn btn-success">
+                  <span className="button-text">Buy</span> 
+                </button>
+              </div>
+            </div>
+          </a>
+          <a href="/fridge" className="clear-default-a">
+            <div className="grid-item-block">
+              <div className="img-block">
+                <img src={fridge} className="product-img"/>
+              </div>
+              <div className="description-block">
+                <span className="description">Toshiba Fridge GR-RB449WE-PMJ(06)</span>
+                <h2 className="price">359 990 ₸</h2>
+              </div>
+              <div className="center-button">
+                <button className="good-button btn btn-success">
+                  <span className="button-text">Buy</span> 
+                </button>
+              </div>
+            </div>
+          </a>
+          <a href="/fridge" className="clear-default-a">
+            <div className="grid-item-block">
+              <div className="img-block">
+                <img src={fridge} className="product-img"/>
+              </div>
+              <div className="description-block">
+                <span className="description">Toshiba Fridge GR-RB449WE-PMJ(06)</span>
+                <h2 className="price">359 990 ₸</h2>
+              </div>
+              <div className="center-button">
+                <button className="good-button btn btn-success">
+                  <span className="button-text">Buy</span> 
+                </button>
+              </div>
+            </div>
+          </a>
         </div>
-      </section>
+      </div>
       
       <div>
         <div>
