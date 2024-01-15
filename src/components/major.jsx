@@ -1,6 +1,16 @@
 import phone from '../assets/phone.png';
 import ad from '../assets/ad.png';
 import fridge from '../assets/fridge.png';
+import delivery from '../assets/delivery.png';
+import warranty from '../assets/warranty.png';
+import aboutUs from '../assets/aboutus.png';
+
+import acer from '../assets/acer.png';
+import xiaomi from '../assets/xiaomi.png';
+import hp from '../assets/hp.png';
+import huawei from '../assets/huawei.png';
+import iphone from '../assets/apple_logo_black.svg';
+import microsoft from '../assets/microsoft.png';
 
 export default function Major() {
   return(
@@ -160,30 +170,60 @@ export default function Major() {
         </div>
       </div>
       
-      <div>
-        <div>
+      <div className="benefits">
 
+        <div className="benefit-block"> 
+          <div className="img-block">
+            <img src={delivery} className="product-img" />
+          </div>
+          <div className="benefit-text-block">
+            <span className="text">Fast delivery</span>
+          </div>
         </div>
-        <div>
 
+        <div className="benefit-block"> 
+          <div className="img-block">
+            <img src={warranty} className="product-img" />
+          </div>
+          <div className="benefit-text-block">
+            <span className="text">Warranty from 12 Months</span>
+          </div>
         </div>
-        <div>
+        <div className="benefit-block"> 
+          <div className="img-block">
+            <img src={aboutUs} className="product-img" />
+          </div>
+          <div className="benefit-text-block">
+            <span className="text">About us</span>
+          </div>
+        </div>
 
-        </div>
       </div>
-      <div>
-        <div>
-          <p>
-
-          </p>
+      <div className="popular-brands">
+        <div className="brand-text-block">
+          <span className="brand-text">
+            Popular Brands
+          </span>
         </div>
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="brands-block-list">
+          <div className="brands-block">
+            <img src={acer} className="brand-img" />
+          </div>
+          <div className="brands-block">
+            <img src={xiaomi} className="brand-img" />
+          </div>
+          <div className="brands-block">
+            <img src={hp} className="brand-img" />
+          </div>
+          <div className="brands-block">
+            <img src={huawei} className="brand-img" />
+          </div>
+          <div className="brands-block">
+            <img src={iphone} className="brand-img" />
+          </div>
+          <div className="brands-block">
+            <img src={microsoft} className="brand-img" />
+          </div>
         </div>
       </div>
     </main>
