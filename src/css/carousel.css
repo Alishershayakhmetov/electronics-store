@@ -1,0 +1,36 @@
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+.carousel {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel li {
+    flex: 0 0 auto;
+    width: 100%; /* Adjust according to your image size */
+}
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 100%; /* Adjust according to your image size */
+    display: none;
+}
+  
+.slide img {
+    width: 100%;
+    height: auto;
+}
+  
+.active {
+    /* Add styling to indicate active slide, for example: */
+    display: block;
+}
