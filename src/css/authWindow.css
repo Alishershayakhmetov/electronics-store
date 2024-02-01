@@ -1,0 +1,135 @@
+.auth-window {
+    max-width: 500px;
+    padding: 32px;
+    background-color: white;
+}
+.auth-bottom {
+    margin-bottom: 16px;
+}
+.tabs {
+    position: relative;
+}
+.line {
+    background: #00a153;
+    height: 2px;
+    position: absolute;
+    transition: .5s ease;
+}
+
+/* copy paste start */
+.selected-tab {
+    color: #00a153;
+    -webkit-transition: .1s ease;
+    -o-transition: .1s ease;
+    transition: .1s ease;
+}
+
+/* 1 tabs-item*/
+.tabs-item {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    height: 46px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 0 16px;
+    text-align: center;
+}
+/* 2 tabs-item */
+.tabs-item{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.label-large {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .1px;
+    line-height: 143%;
+}
+
+.spacer {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.login-fields {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 4px;
+    height: 80px;
+    width: 100%;
+}
+
+.body-small {
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: .4px;
+    line-height: 1rem;
+}
+
+.grey-text {
+    color: #23362d99;
+}
+
+.body-medium {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .25px;
+    line-height: 143%;
+}
+
+input, textarea[data-v-75c0b037] {
+    background: inherit;
+    border: 1px solid var(--light);
+    border-radius: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 12px;
+    resize: none;
+    width: 100%;
+}
+
+.login-forgot {
+    margin-bottom: 16px;
+}
+
+.blue-text {
+    color: #2196f3;;
+}
+
+.filled {
+    border: none;
+    color: #fff;
+}
+/* copy paste end */

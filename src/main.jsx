@@ -1,11 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import MainPage from './mainpage'
-import Product from './product'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import MainPage from "./pages/mainpage";
+import Product from "./pages/product";
+import Auth from "./pages/auth";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Product />
+    <Auth />
   </React.StrictMode>
-)
-
+);
