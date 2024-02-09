@@ -34,7 +34,7 @@ const ImageCarousel = ({ images }) => {
           return (
             <li key={index} className="slide active small-block">
               <img
-                src={"src/assets/notebook/" + image.src}
+                src={"/src/assets/notebook/" + image.src}
                 alt={image.alt}
                 className="small-block small-img"
               />

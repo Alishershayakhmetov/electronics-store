@@ -1,15 +1,21 @@
-import youtube from '../assets/youtube.png';
+import youtube from "../assets/youtube.png";
 
 export default function Footer() {
-  return(
+  return (
     <footer>
-      <div className="upper-footer-block"> {/* form div*/}
+      <div className="upper-footer-block">
+        {" "}
+        {/* form div*/}
         <form className="email-form">
           <label htmlFor="email">get in touch with us:</label>
           <input type="email" id="email" name="email" />
-          <button type="submit" className="btn btn-warning">Submit</button>
+          <button type="submit" className="btn btn-warning">
+            Submit
+          </button>
         </form>
-        <section className="lists-block"> {/*lists */}
+        <section className="lists-block">
+          {" "}
+          {/*lists */}
           <div>
             <p>internet-shop</p>
             <ul>
@@ -39,7 +45,7 @@ export default function Footer() {
       <div className="social-media-list">
         <div className="social-media-block">
           <span>We are in social media</span>
-          <div style={{"display":"flex","flex-direction":"row"}}>
+          <div style={{ display: "flex", flexDirection: "row" }}>
             <a href="https://www.youtube.com/" target="_blank">
               <img src={youtube} className="social-media-img" />
             </a>
@@ -57,15 +63,11 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div>
-          {/*hotline number*/}
-        </div>
+        <div>{/*hotline number*/}</div>
       </div>
       <div className="lower-footer-block">
         <span>&copy AO "Imart" 2002-2023</span>
-        <div>
-
-        </div>
+        <div></div>
         <span>privacy policy</span>
       </div>
     </footer>
