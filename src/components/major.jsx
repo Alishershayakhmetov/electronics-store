@@ -12,169 +12,185 @@ import huawei from "../assets/huawei.png";
 import iphone from "../assets/apple_logo_black.svg";
 import microsoft from "../assets/microsoft.png";
 
+import style from "../css/major.module.css";
+
 export default function Major() {
   return (
     <main style={{ backgroundColor: "#09D0EF" }}>
-      <section className="container-block">
-        <div className="ad-block">
-          <img src={ad} className="ad" />
+      <section className={style.containerBlock}>
+        <div className={style.adBlock}>
+          <img src={ad} className={style.ad} />
         </div>
-        <section className="good-block">
+        <section className={style.goodBlock}>
           <p>product of the day</p>
-          <div className="good-img-block">
-            <img src={phone} className="good-img" />
+          <div className={style.goodImgBlock}>
+            <img src={phone} className={style.goodImg} />
           </div>
-          <div className="description-block">
-            <p className="description">
+          <div className={style.descriptionBlock}>
+            <p className={style.description}>
               Apple iPhone 15 Pro Max 256GB Natural Titanium (MU793) Smartphone
             </p>
           </div>
           <h2>799 990 ₸</h2>
-          <div className="center-button">
-            <button className="good-button btn btn-success">Buy</button>
+          <div className={style.centerButton}>
+            <button className={style.goodButton + " btn btn-success"}>
+              Buy
+            </button>
           </div>
         </section>
       </section>
 
-      <div className="choose-product">
-        <div className="button-set">
-          <div className="button-block">
-            <button className="btn btn-outline-secondary category-button">
-              <span className="button-text">Popular</span>
+      <div className={style.chooseProduct}>
+        <div className={style.buttonSet}>
+          <div className={style.buttonBlock}>
+            <button
+              className={"btn btn-outline-secondary " + style.categoryButton}
+            >
+              <span className={style.buttonText}>Popular</span>
             </button>
           </div>
-          <div className="button-block">
-            <button className="btn btn-outline-secondary category-button">
-              <span className="button-text">Phones</span>
+          <div className={style.buttonBlock}>
+            <button
+              className={"btn btn-outline-secondary " + style.categoryButton}
+            >
+              <span className={style.buttonText}>Phones</span>
             </button>
           </div>
-          <div className="button-block">
-            <button className="btn btn-outline-secondary category-button">
-              <span className="button-text">Computers</span>
+          <div className={style.buttonBlock}>
+            <button
+              className={"btn btn-outline-secondary " + style.categoryButton}
+            >
+              <span className={style.buttonText}>Computers</span>
             </button>
           </div>
-          <div className="button-block">
-            <button className="btn btn-outline-secondary category-button">
-              <span className="button-text">Fridges</span>
+          <div className={style.buttonBlock}>
+            <button
+              className={"btn btn-outline-secondary " + style.categoryButton}
+            >
+              <span className={style.buttonText}>Fridges</span>
             </button>
           </div>
-          <div className="button-block">
-            <button className="btn btn-outline-secondary category-button">
-              <span className="button-text">Vacuum cleaners</span>
+          <div className={style.buttonBlock}>
+            <button
+              className={"btn btn-outline-secondary " + style.categoryButton}
+            >
+              <span className={style.buttonBlock}>Vacuum cleaners</span>
             </button>
           </div>
-          <div className="button-block">
-            <button className="btn btn-outline-secondary category-button">
-              <span className="button-text">Wash machines</span>
+          <div className={style.buttonBlock}>
+            <button
+              className={"btn btn-outline-secondary " + style.categoryButton}
+            >
+              <span className={style.buttonText}>Wash machines</span>
             </button>
           </div>
         </div>
 
-        <div className="grid-product-block">
-          <a href="/fridge" className="clear-default-a">
-            <div className="grid-item-block">
-              <div className="img-block">
-                <img src={fridge} className="product-img" />
+        <div className={style.gridProductBlock}>
+          <a href="/fridge" className={style.clearDefaultA}>
+            <div className={style.gridItemBlock}>
+              <div className={style.imgBlock}>
+                <img src={fridge} className={style.productImg} />
               </div>
-              <div className="description-block">
-                <span className="description">
+              <div className={style.descriptionBlock}>
+                <span className={style.description}>
                   Toshiba Fridge GR-RB449WE-PMJ(06)
                 </span>
-                <h2 className="price">359 990 ₸</h2>
+                <h2 className={style.price}>359 990 ₸</h2>
               </div>
-              <div className="center-button">
-                <button className="good-button btn btn-success">
-                  <span className="button-text">Buy</span>
+              <div className={style.centerButton}>
+                <button className={style.goodButton + " btn btn-success"}>
+                  <span className={style.buttonText}>Buy</span>
                 </button>
               </div>
             </div>
           </a>
-          <a href="/fridge" className="clear-default-a">
-            <div className="grid-item-block">
-              <div className="img-block">
-                <img src={fridge} className="product-img" />
+          <a href="/fridge" className={style.clearDefaultA}>
+            <div className={style.gridItemBlock}>
+              <div className={style.imgBlock}>
+                <img src={fridge} className={style.productImg} />
               </div>
-              <div className="description-block">
-                <span className="description">
+              <div className={style.descriptionBlock}>
+                <span className={style.description}>
                   Toshiba Fridge GR-RB449WE-PMJ(06)
                 </span>
-                <h2 className="price">359 990 ₸</h2>
+                <h2 className={style.price}>359 990 ₸</h2>
               </div>
-              <div className="center-button">
-                <button className="good-button btn btn-success">
-                  <span className="button-text">Buy</span>
+              <div className={style.centerButton}>
+                <button className={style.goodButton + " btn btn-success"}>
+                  <span className={style.buttonText}>Buy</span>
                 </button>
               </div>
             </div>
           </a>
-          <a href="/fridge" className="clear-default-a">
-            <div className="grid-item-block">
-              <div className="img-block">
-                <img src={fridge} className="product-img" />
+          <a href="/fridge" className={style.clearDefaultA}>
+            <div className={style.gridItemBlock}>
+              <div className={style.imgBlock}>
+                <img src={fridge} className={style.productImg} />
               </div>
-              <div className="description-block">
-                <span className="description">
+              <div className={style.descriptionBlock}>
+                <span className={style.description}>
                   Toshiba Fridge GR-RB449WE-PMJ(06)
                 </span>
-                <h2 className="price">359 990 ₸</h2>
+                <h2 className={style.price}>359 990 ₸</h2>
               </div>
-              <div className="center-button">
-                <button className="good-button btn btn-success">
-                  <span className="button-text">Buy</span>
+              <div className={style.centerButton}>
+                <button className={style.goodButton + " btn btn-success"}>
+                  <span className={style.buttonText}>Buy</span>
                 </button>
               </div>
             </div>
           </a>
-          <a href="/fridge" className="clear-default-a">
-            <div className="grid-item-block">
-              <div className="img-block">
-                <img src={fridge} className="product-img" />
+          <a href="/fridge" className={style.clearDefaultA}>
+            <div className={style.gridItemBlock}>
+              <div className={style.imgBlock}>
+                <img src={fridge} className={style.productImg} />
               </div>
-              <div className="description-block">
-                <span className="description">
+              <div className={style.descriptionBlock}>
+                <span className={style.description}>
                   Toshiba Fridge GR-RB449WE-PMJ(06)
                 </span>
-                <h2 className="price">359 990 ₸</h2>
+                <h2 className={style.price}>359 990 ₸</h2>
               </div>
-              <div className="center-button">
-                <button className="good-button btn btn-success">
-                  <span className="button-text">Buy</span>
+              <div className={style.centerButton}>
+                <button className={style.goodButton + " btn btn-success"}>
+                  <span className={style.buttonText}>Buy</span>
                 </button>
               </div>
             </div>
           </a>
-          <a href="/fridge" className="clear-default-a">
-            <div className="grid-item-block">
-              <div className="img-block">
-                <img src={fridge} className="product-img" />
+          <a href="/fridge" className={style.clearDefaultA}>
+            <div className={style.gridItemBlock}>
+              <div className={style.imgBlock}>
+                <img src={fridge} className={style.productImg} />
               </div>
-              <div className="description-block">
-                <span className="description">
+              <div className={style.descriptionBlock}>
+                <span className={style.description}>
                   Toshiba Fridge GR-RB449WE-PMJ(06)
                 </span>
-                <h2 className="price">359 990 ₸</h2>
+                <h2 className={style.price}>359 990 ₸</h2>
               </div>
-              <div className="center-button">
-                <button className="good-button btn btn-success">
-                  <span className="button-text">Buy</span>
+              <div className={style.centerButton}>
+                <button className={style.goodButton + " btn btn-success"}>
+                  <span className={style.buttonText}>Buy</span>
                 </button>
               </div>
             </div>
           </a>
-          <a href="/fridge" className="clear-default-a">
-            <div className="grid-item-block">
-              <div className="img-block">
-                <img src={fridge} className="product-img" />
+          <a href="/fridge" className={style.clearDefaultA}>
+            <div className={style.gridItemBlock}>
+              <div className={style.imgBlock}>
+                <img src={fridge} className={style.productImg} />
               </div>
-              <div className="description-block">
-                <span className="description">
+              <div className={style.descriptionBlock}>
+                <span className={style.description}>
                   Toshiba Fridge GR-RB449WE-PMJ(06)
                 </span>
-                <h2 className="price">359 990 ₸</h2>
+                <h2 className={style.price}>359 990 ₸</h2>
               </div>
-              <div className="center-button">
-                <button className="good-button btn btn-success">
-                  <span className="button-text">Buy</span>
+              <div className={style.centerButton}>
+                <button className={style.goodButton + " btn btn-success"}>
+                  <span className={style.buttonText}>Buy</span>
                 </button>
               </div>
             </div>
@@ -182,55 +198,55 @@ export default function Major() {
         </div>
       </div>
 
-      <div className="benefits">
-        <div className="benefit-block">
-          <div className="img-block">
-            <img src={delivery} className="product-img" />
+      <div className={style.benefits}>
+        <div className={style.benefitBlock}>
+          <div className={style.imgBlock}>
+            <img src={delivery} className={style.productImg} />
           </div>
-          <div className="benefit-text-block">
-            <span className="text">Fast delivery</span>
+          <div className={style.benefitTextBlock}>
+            <span className={style.text}>Fast delivery</span>
           </div>
         </div>
 
-        <div className="benefit-block">
-          <div className="img-block">
-            <img src={warranty} className="product-img" />
+        <div className={style.benefitBlock}>
+          <div className={style.imgBlock}>
+            <img src={warranty} className={style.productImg} />
           </div>
-          <div className="benefit-text-block">
-            <span className="text">Warranty from 12 Months</span>
+          <div className={style.benefitTextBlock}>
+            <span className={style.text}>Warranty from 12 Months</span>
           </div>
         </div>
-        <div className="benefit-block">
-          <div className="img-block">
-            <img src={aboutUs} className="product-img" />
+        <div className={style.benefitBlock}>
+          <div className={style.imgBlock}>
+            <img src={aboutUs} className={style.productImg} />
           </div>
-          <div className="benefit-text-block">
-            <span className="text">About us</span>
+          <div className={style.benefitTextBlock}>
+            <span className={style.text}>About us</span>
           </div>
         </div>
       </div>
-      <div className="popular-brands">
-        <div className="brand-text-block">
-          <span className="brand-text">Popular Brands</span>
+      <div className={style.popularBrands}>
+        <div className={style.brandTextBlock}>
+          <span className={style.brnadText}>Popular Brands</span>
         </div>
-        <div className="brands-block-list">
-          <div className="brands-block">
-            <img src={acer} className="brand-img" />
+        <div className={style.brandsBlockList}>
+          <div className={style.brandsBlock}>
+            <img src={acer} className={style.brandImg} />
           </div>
-          <div className="brands-block">
-            <img src={xiaomi} className="brand-img" />
+          <div className={style.brandsBlock}>
+            <img src={xiaomi} className={style.brandImg} />
           </div>
-          <div className="brands-block">
-            <img src={hp} className="brand-img" />
+          <div className={style.brandsBlock}>
+            <img src={hp} className={style.brandImg} />
           </div>
-          <div className="brands-block">
-            <img src={huawei} className="brand-img" />
+          <div className={style.brandsBlock}>
+            <img src={huawei} className={style.brandImg} />
           </div>
-          <div className="brands-block">
-            <img src={iphone} className="brand-img" />
+          <div className={style.brandsBlock}>
+            <img src={iphone} className={style.brandImg} />
           </div>
-          <div className="brands-block">
-            <img src={microsoft} className="brand-img" />
+          <div className={style.brandsBlock}>
+            <img src={microsoft} className={style.brandImg} />
           </div>
         </div>
       </div>

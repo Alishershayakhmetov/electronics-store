@@ -1,13 +1,12 @@
-import "../css/auth.css";
+import style from "../css/auth.module.css";
 
 import AuthWindow from "../components/authWindow";
-import "../css/authWindow.css";
 
 export default function AuthPage() {
   return (
-    <div className="background">
+    <div className={style.background}>
       <div style={{ padding: "2em auto" }}>
-        <div className="content-w3ls">
+        <div className={style.contentW3ls}>
           <AuthWindow></AuthWindow>
         </div>
       </div>

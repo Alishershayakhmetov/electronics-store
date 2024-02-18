@@ -1,5 +1,6 @@
 import React from "react";
 import ImageCarousel from "./carousel";
+import style from "../css/product.module.css";
 
 export default function Product() {
   const images = [
@@ -12,7 +13,7 @@ export default function Product() {
 
   return (
     <>
-      <ul className="path">
+      <ul className={style.path}>
         {" "}
         {/*storing product path in the website */}
         <li>
@@ -20,16 +21,16 @@ export default function Product() {
           <svg
             style={{ margin: "0 2px", width: "16px", height: "16px" }}
             fill="none"
-            stroke
+            stroke="true"
             viewBox="0 0 24 24 "
           >
             <path
               d="M8 19.84L14.52 13.32C15.29 12.55 15.29 11.29 14.52 10.52L8 4"
               stroke="#606971"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeMiterlimit="10"
+              strokeWidth="1.5"
             ></path>
           </svg>
         </li>
@@ -38,16 +39,16 @@ export default function Product() {
           <svg
             style={{ margin: "0 2px", width: "16px", height: "16px" }}
             fill="none"
-            stroke
+            stroke="true"
             viewBox="0 0 24 24 "
           >
             <path
               d="M8 19.84L14.52 13.32C15.29 12.55 15.29 11.29 14.52 10.52L8 4"
               stroke="#606971"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeMiterlimit="10"
+              strokeWidth="1.5"
             ></path>
           </svg>
         </li>
@@ -56,41 +57,39 @@ export default function Product() {
           <svg
             style={{ margin: "0 2px", width: "16px", height: "16px" }}
             fill="none"
-            stroke
+            stroke="true"
             viewBox="0 0 24 24 "
           >
             <path
               d="M8 19.84L14.52 13.32C15.29 12.55 15.29 11.29 14.52 10.52L8 4"
               stroke="#606971"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeMiterlimit="10"
+              strokeWidth="1.5"
             ></path>
           </svg>
         </li>
       </ul>
-      <article className="article">
-        <div className="product-block">
+      <article className={style.article}>
+        <div className={style.productBlock}>
           <div>
             <div>
-              <h2 className="product-name">
+              <h2 className={style.productName}>
                 Игровой ноутбук Asus TUF Gaming F15 i5 12500H/ 16ГБ / 512SSD /
                 RTX3050 4ГБ / 15.6 / DOS / (FX507ZC4-HN143)
               </h2>
             </div>
-            <div className="product-info">
+            <div className={style.productInfo}>
               <div>
                 <ImageCarousel images={images} />
               </div>
               <div>
-                <p>
-                  <path className="description-header">Description: </path>
-                </p>
-                <div className="description-info">
-                  <div className="description-item">
+                <p className={style.descriptionHeader}>Description:</p>
+                <div className={style.descriptionInfo}>
+                  <div className={style.descriptionItem}>
                     <div>Display size</div>
-                    <div className="dot-div"></div>
+                    <div className={style.dotDiv}></div>
                     <div>15.6</div>
                   </div>
                 </div>
@@ -98,19 +97,15 @@ export default function Product() {
             </div>
           </div>
         </div>
-        <div className="price-block">
+        <div className={style.priceBlock}>
           {" "}
           {/*price div */}
           <div>
-            <path>ID: 1234567890</path>
+            <p>ID: 1234567890</p>
           </div>
           <div>
-            <p>
-              <path>439 990 ₸</path>
-            </p>
-            <p>
-              <path>up to 21 000 Bonuses</path>
-            </p>
+            <p>439 990 ₸</p>
+            <p>up to 21 000 Bonuses</p>
             <div style={{ display: "flex", alignItems: "center" }}>
               <button
                 className="btn btn-success"
@@ -120,9 +115,9 @@ export default function Product() {
               </button>
             </div>
           </div>
-          <div className="btn-block">
+          <div className={style.btnBlock}>
             <button className="btn">
-              <img src={"src/assets/compare.png"} width="20" height="20" />
+              <img src={"../src/assets/compare.png"} width="20" height="20" />
               compare
             </button>
             <div>
@@ -135,7 +130,7 @@ export default function Product() {
                 }}
               >
                 <img
-                  src={"src/assets/favourite-heart.svg"}
+                  src={"../src/assets/favourite-heart.svg"}
                   width="20"
                   height="20"
                 />
@@ -143,7 +138,7 @@ export default function Product() {
               </button>
             </div>
             <button className="btn">
-              <img src={"src/assets/share.svg"} width="20" height="20" />
+              <img src={"../src/assets/share.svg"} width="20" height="20" />
               share
             </button>
           </div>

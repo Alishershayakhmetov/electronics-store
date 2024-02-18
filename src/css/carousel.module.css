@@ -1,4 +1,4 @@
-.carousel-container {
+.carouselContainer {
     width: 100%;
     overflow: hidden;
 }
@@ -20,13 +20,13 @@
     display: block;
 }
 
-.small-block {
+.smallBlock {
     border-radius: 4px;
     width: 48px;
     height: 36px;
     object-fit: cover;
     margin: 0 5px;
 }
-.small-img {
+.smallImg {
     border: 1px solid #f4f4f4;
 }

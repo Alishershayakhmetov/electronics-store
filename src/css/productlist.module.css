@@ -1,4 +1,4 @@
-.product-list {
+.productList {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(208px,1fr));
     grid-row-gap: 16px;
@@ -10,16 +10,16 @@
     margin: 0;
     list-style: none;
 }
-.product-item {
+.productItem {
     padding-left: 0;
     margin: 0;
 }
-.item-div {
+.itemDiv {
     max-width: none;
     height: 100%;
     max-height: 100%;
 }
-.item-img-block {
+.itemImgBlock {
     position: relative;
     box-sizing: border-box;
     display: flex;
@@ -27,11 +27,11 @@
     justify-content: center;
     width: 100%;
 }
-.item-img-div {
+.itemImgDiv {
     padding-top: 24px;
     margin-bottom: 8px;
 }
-.product-cart-carousel-div {
+.productCartCarouselDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +40,7 @@
     height: 100%;
     overflow: hidden;
 }
-.slice-wrapper {
+.sliceWrapper {
     width: 140px;
     height: 140px;
 }
@@ -53,10 +53,10 @@
     margin-top: 8px;
     background-color: transparent;
 }
-.margin-left-4px {
+.marginLeft4px {
     margin-left: 4px;
 }
-.span-active {
+.spanActive {
     background-color: orangered;
 }
 .slider {
@@ -66,7 +66,7 @@
     cursor: grab;
     will-change: transform,scale;
 }
-.slide-item {
+.slideItem {
     display: flex;
     align-items: center;
     transition: transform 1s ease-in-out;
@@ -79,19 +79,19 @@
     -moz-user-select: none;
     user-select: none;
 }
-.product-img {
+.productImg {
     color: transparent;
     max-width: 100%;
     max-height: 100%;
 }
-.item-title {
+.itemTitle {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: flex-end;
     margin-bottom: 12px;
 }
-.product-title-div {
+.productTitleDiv {
     flex: 1 1 100%;
 }
 .title {
@@ -109,7 +109,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
 }
-.rating-div {
+.ratingDiv {
     position: relative;
     display: flex;
     align-items: center;
@@ -118,7 +118,7 @@
     max-height: 44px;
     margin-top: 8px;
 }
-.rating-title {
+.ratingTitle {
     margin-right: 8px;
     margin-left: 4px;
     color: #464c53;
@@ -131,7 +131,7 @@
     line-height: 20px;
     margin: 0;
 }
-.review-title {
+.reviewTitle {
     padding-top: 2px;
     color: #8e979f;
     font-size: 14px;
@@ -139,12 +139,12 @@
     line-height: 20px;
     margin: 0;
 }
-.item-btn {
+.item-Btn {
     display: flex;
     width: 100%;
     padding: 0;
 }
-.cart-btn {
+.cartBtn {
     margin-right: 0;
     width: 100%;
     padding: 0;

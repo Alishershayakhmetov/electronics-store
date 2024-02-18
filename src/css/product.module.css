@@ -10,42 +10,42 @@
     max-width: 1260px;
     justify-content: space-between;
 }
-.product-name {
+.productName {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
-.product-block {
+.productBlock {
     max-width: 100%;
 }
-.price-block {
+.priceBlock {
     max-width: 300px;
 }
-.btn-block {
+.btnBlock {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
     border-top: 1px solid #f4f4f4;
     border-radius: 4px;
 }
-.product-info {
+.productInfo {
     display: flex;
     flex-direction: row;
 }
-.description-header {
+.descriptionHeader {
     color: #464c53;
     font-weight: 600;
 }
-.description-info {
+.descriptionInfo {
     display: flex;
     flex-direction: column;
 }
-.description-item {
+.descriptionItem {
     display: flex;
     flex-direction: row;
 }
-.dot-div {
+.dotDiv {
     width: 100%;
     /*flex: 1 0 auto;*/
     border-bottom: 2px dotted gray;

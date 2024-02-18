@@ -1,5 +1,5 @@
 
-.catalog-main-div {
+.catalogMainDiv {
     display: grid;
     grid-template-columns: repeat(12,minmax(88px,1fr));
     grid-row-gap: 16px;
@@ -14,13 +14,13 @@
     flex-direction: column;
 }
 */
-.catalog-left-grid {
+.catalogLeftGrid {
     display: block;
     max-height: none;
     grid-row: 1/2;
     grid-column: 1/4;
 }
-.catalog-right-grid {
+.catalogRightGrid {
     grid-row: 1/2;
     grid-column: 4/13;
 }

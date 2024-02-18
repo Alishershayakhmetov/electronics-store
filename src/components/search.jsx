@@ -1,16 +1,17 @@
 import SearchFilter from "./searchfilter";
 import ProductList from "./productlist";
+import style from "../css/search.module.css";
 
 export default function Search() {
   return (
     <main style={{ paddingBottom: "16px" }}>
       <section style={{ maxWidth: "1232px", margin: " auto " }}>
         <ul> {/* page path */}</ul>
-        <div className="catalog-main-div">
-          <div className="catalog-left-grid">
+        <div className={style.catalogMainDiv}>
+          <div className={style.catalogLeftGrid}>
             <SearchFilter /> {/* filter  */}
           </div>
-          <div className="catalog-right-grid">
+          <div className={style.catalogRightGrid}>
             {" "}
             {/* products */}
             <div> {/*ad banner */}</div>

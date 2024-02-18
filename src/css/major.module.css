@@ -1,4 +1,4 @@
-.container-block {
+.containerBlock {
   max-width: 90%; /* Set a maximum width for the main container */
   margin: 0 auto; /* Center the main container */
   /*height: 35vh;*/ /* 35% of the viewport height */
@@ -9,7 +9,7 @@
   align-items: stretch;
   padding: 0 10px; /* Smaller space on the left and right */
 }
-.ad-block {
+.adBlock {
   max-width: 70%;
   aspect-ratio: 2540 / 1060/* original width / original height */;
   overflow: hidden;
@@ -19,22 +19,22 @@
   height: auto;
   display: block;
 }
-.good-block {
+.goodBlock {
   overflow: hidden;
   max-width: 20%;
 }
-.good-img-block {
+.goodImgBlock {
   max-width: 50%;
   aspect-ratio: 248 / 309/* original width / original height */;
   overflow: hidden;
   margin: auto auto;
 }
-.good-img {
+.goodImg {
   max-width: 100%;
   height: auto;
   display: block;
 }
-.description-block {
+.descriptionBlock {
   overflow: hidden;
   /*white-space: nowrap;*/
 }
@@ -46,12 +46,12 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
-.center-button {
+.centerButton {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.good-button {
+.goodButton {
   width: 50%;
   align-items: center;
   text-align: center;
@@ -61,23 +61,23 @@
 
 
 
-.choose-product {
+.chooseProduct {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 1232px;
 }
-.button-set {
+.buttonSet {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.button-block {
+.buttonBlock {
   display: flex;
   align-items: center;
   text-align: center;
 }
-.category-button {
+.categoryButton {
   
   padding: 10px 20px;
   border-radius: 16px;
@@ -85,7 +85,7 @@
   display: block;
   margin: 0 auto;
 }
-.button-text {
+.buttonText {
   align-items: center;
   vertical-align: middle;
   text-align: center;
@@ -94,33 +94,33 @@
 
 
 
-.clear-default-a {
+.clearDefaultA {
   text-decoration: none;
   color: inherit;
   background-color: transparent;
   cursor: auto;
   outline: none;
 }
-.grid-product-block {
+.gridProductBlock {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(6,calc((100% - 40px) / 6));
 }
-.product-img {
+.productImg {
   width: 140px;
   height: 140px;
   margin: 0 auto;
 }
-.grid-item-block {
+.gridItemBlock {
   width: 200px;
   height: 390px;
 }
-.img-block {
+.imgBlock {
   margin: 0 auto;
   align-items: center;
   text-align: center;
 }
-.description-block {
+.descriptionBlock {
 
 }
 .description {
@@ -129,7 +129,7 @@
 .price {
 
 }
-.buy-button-block {
+.buyButtonBlock {
 
 }
 
@@ -144,11 +144,11 @@
   text-align: center;
   justify-content: space-around;
 }
-.benefit-block {
+.benefitBlock {
   display: flex;
   flex-direction: row;
 }
-.benefit-text-block {
+.benefitTextBlock {
   overflow: hidden;
 }
 .text {
@@ -161,30 +161,30 @@
 }
 
 
-.popular-barnds {
+.popularBarnds {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.brands-block-list {
+.brandsBlockList {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
   justify-content: space-around;
 }
-.brand-block {
+.brandBlock {
   margin: auto;
 }
-.brand-text-block {
+.brandTextBlock {
   text-align: center;
   align-items: center;
 }
-.brand-text {
+.brandText {
   margin: auto;
 }
-.brand-img {
+.brandImg {
   width: 121px;
   height: auto;
 }

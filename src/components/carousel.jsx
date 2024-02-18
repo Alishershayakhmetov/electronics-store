@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import style from "../css/carousel.module.css";
 
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,29 +15,38 @@ const ImageCarousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel-container">
-      <ul className="carousel">
+    <div className={style.carouselContainer}>
+      <ul className={style.carousel}>
         {images.map((image, index) => (
           <li
             key={index}
-            className={index === currentIndex ? "slide active" : "slide"}
+            className={
+              index === currentIndex
+                ? style.slide + " " + style.active
+                : style.slide
+            }
           >
             <img
-              src={"src/assets/notebook/" + image.src}
+              src={"../src/assets/notebook/" + image.src}
               alt={image.alt}
               style={{ width: "500px", height: "300px" }}
             />
           </li>
         ))}
       </ul>
-      <ul className="carousel">
+      <ul className={style.carousel}>
         {images.map((image, index) => {
           return (
-            <li key={index} className="slide active small-block">
+            <li
+              key={index}
+              className={
+                style.slide + " " + style.active + " " + style.smallBlock
+              }
+            >
               <img
                 src={"/src/assets/notebook/" + image.src}
                 alt={image.alt}
-                className="small-block small-img"
+                className={style.smallBlock + " " + style.smallImg}
               />
             </li>
           );

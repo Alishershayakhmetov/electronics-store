@@ -1,4 +1,5 @@
 import qwerty from "../assets/Apple_iOS-update-iphone12pro.webp";
+import style from "../css/catalog.module.css";
 
 function CatalogItem({ number }) {
   const generateItem = () => {
@@ -6,11 +7,11 @@ function CatalogItem({ number }) {
     for (let i = 0; i < number; i++) {
       catalogList.push(
         <li key={i}>
-          <button className="catalog-first-btn">
-            <div className="catalog-first-img-layer">
-              <img src={qwerty} className="catalog-first-img" />
+          <button className={style.catalogFirstBtn}>
+            <div className={style.catalogFirstImgLayer}>
+              <img src={qwerty} className={style.catalogFirstImg} />
             </div>
-            <p className="catalog-first-p">Smartphones and Gandets</p>
+            <p className={style.catalogFirstP}>Smartphones and Gandets</p>
           </button>
         </li>
       );
@@ -24,7 +25,7 @@ export default function Catalog() {
   return (
     <section>
       <div>
-        <ul className="path">
+        <ul className={style.path}>
           {" "}
           {/*storing product path in the website */}
           <li>
@@ -82,7 +83,7 @@ export default function Catalog() {
             </svg>
           </li>
         </ul>
-        <ul className="catalog-first">
+        <ul className={style.catalogFirst}>
           <CatalogItem number={24} />
         </ul>
         <ul></ul>

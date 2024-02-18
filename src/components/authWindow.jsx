@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import style from "../css/authWindow.module.css";
 
 export default function AuthWindow() {
   const [logIn, setLogIn] = useState(true);
@@ -29,15 +30,29 @@ export default function AuthWindow() {
   }
 
   return (
-    <div className="auth-window">
-      <div className="auth-bottom">
-        <div className="tabs">
-          <div className="tabs-items">
+    <div className={style.authWindow}>
+      <div className={style.authBottom}>
+        <div className={style.tabs}>
+          <div className={style.tabsItems}>
             <div
               className={
                 logIn
-                  ? "selected-tab tabs-item label-large spacer pointer"
-                  : "tabs-item label-large spacer pointer"
+                  ? style.selectedTab +
+                    " " +
+                    style.tabsItem +
+                    " " +
+                    style.labelLarge +
+                    " " +
+                    style.spacer +
+                    " " +
+                    style.pointer
+                  : style.tabsItem +
+                    " " +
+                    style.labelLarge +
+                    " " +
+                    style.spacer +
+                    " " +
+                    style.pointer
               }
               onClick={(e) => {
                 e.preventDefault;
@@ -49,8 +64,22 @@ export default function AuthWindow() {
             <div
               className={
                 logIn
-                  ? "tabs-item label-large spacer pointer"
-                  : "selected-tab tabs-item label-large spacer pointer"
+                  ? style.tabsItem +
+                    " " +
+                    style.labelLarge +
+                    " " +
+                    style.spacer +
+                    " " +
+                    style.pointer
+                  : style.selectedTab +
+                    " " +
+                    style.tabsItem +
+                    " " +
+                    style.labelLarge +
+                    " " +
+                    style.spacer +
+                    " " +
+                    style.pointer
               }
               onClick={(e) => {
                 e.preventDefault;
@@ -60,14 +89,20 @@ export default function AuthWindow() {
               Register
             </div>
           </div>
-          <div className="line" style={{ width: "50%", left: "0%" }}></div>
+          <div
+            className={style.line}
+            style={{ width: "50%", left: "0%" }}
+          ></div>
         </div>
       </div>
       <section>
-        <form className="login-fields" onSubmit={handleSubmit}>
+        <form className={style.loginFields} onSubmit={handleSubmit}>
           <div>
-            <div className="field">
-              <label htmlFor="name" className="body-small grey-text">
+            <div className={style.field}>
+              <label
+                htmlFor="name"
+                className={style.bodySmall + " " + style.greyText}
+              >
                 "Username *"
               </label>
               <input
@@ -82,8 +117,11 @@ export default function AuthWindow() {
             </div>
           </div>
           <div>
-            <div className="field">
-              <label htmlFor="password" className="body-small grey-text">
+            <div className={style.field}>
+              <label
+                htmlFor="password"
+                className={style.bodySmall + " " + style.greyText}
+              >
                 "Password *"
               </label>
               <input
@@ -97,14 +135,18 @@ export default function AuthWindow() {
               ></input>
             </div>
           </div>
-          <div className="login-forgot">
-            <div className="blue-text body-medium pointer">
+          <div className={style.loginForgot}>
+            <div
+              className={
+                style.blueText + " " + style.bodyMedium + " " + style.pointer
+              }
+            >
               Forgot password?
             </div>
           </div>
           <div>
             <button
-              className="filled label-large"
+              className={style.filled + " " + style.labelLarge}
               style={{
                 background: "#00a153",
                 width: "100%",

@@ -1,9 +1,9 @@
-.auth-window {
+.authWindow {
     max-width: 500px;
     padding: 32px;
     background-color: white;
 }
-.auth-bottom {
+.authBottom {
     margin-bottom: 16px;
 }
 .tabs {
@@ -17,7 +17,7 @@
 }
 
 /* copy paste start */
-.selected-tab {
+.selectedTab {
     color: #00a153;
     -webkit-transition: .1s ease;
     -o-transition: .1s ease;
@@ -25,7 +25,7 @@
 }
 
 /* 1 tabs-item*/
-.tabs-item {
+.tabsItem {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     height: 46px;
@@ -35,7 +35,7 @@
     text-align: center;
 }
 /* 2 tabs-item */
-.tabs-item{
+.tabsItem{
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
@@ -46,7 +46,7 @@
     display: flex;
 }
 
-.label-large {
+.labelLarge {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: .1px;
@@ -64,7 +64,7 @@
     cursor: pointer;
 }
 
-.login-fields {
+.loginFields {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     display: -webkit-box;
@@ -91,18 +91,18 @@
     width: 100%;
 }
 
-.body-small {
+.bodySmall {
     font-size: .75rem;
     font-weight: 400;
     letter-spacing: .4px;
     line-height: 1rem;
 }
 
-.grey-text {
+.greyText {
     color: #23362d99;
 }
 
-.body-medium {
+.bodyMedium {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: .25px;
@@ -120,11 +120,11 @@ input, textarea[data-v-75c0b037] {
     width: 100%;
 }
 
-.login-forgot {
+.loginForgot {
     margin-bottom: 16px;
 }
 
-.blue-text {
+.blueText {
     color: #2196f3;;
 }
 

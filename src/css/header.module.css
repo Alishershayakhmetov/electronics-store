@@ -4,32 +4,32 @@
     align-items: center;
     flex-direction: column;
 }
-.upper-header {
+.upperHeader {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.lower-header {
+.lowerHeader {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.left-div {
+.leftDiv {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.left-lower-div {
+.leftLowerDiv {
     display: flex;
     flex-direction: row;
 }
-.right-lang-div {
+.rightLangDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
 }
-.lang-button {
+.langButton {
     margin: 5px 5px;
     padding: 5px 12px;
     height: auto;
@@ -37,17 +37,17 @@
     text-align: center;
     /*align-self: stretch;*/
 }
-.lang-button img {
+.langButton img {
     max-width: 100%;
     height: auto;
     margin-right: 3px;
     vertical-align: middle;
 } 
-.lang-button span {
+.langButton span {
     vertical-align: middle;
     margin: 0;
 }
-.city-window {
+.cityWindow {
     display: none;
 }
 .logo {
@@ -60,7 +60,7 @@
     align-items: center; /* Aligns items vertically */
     /* flex-wrap: wrap; // Uncomment this to enable wrapping */
   }
-.icon-div {
+.iconDiv {
     position: relative;
     height: 24px;
     margin-bottom: 4px;

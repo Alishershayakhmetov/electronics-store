@@ -1,19 +1,20 @@
 import youtube from "../assets/youtube.png";
+import style from "../css/footer.module.css";
 
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: "#15A3C7" }}>
-      <div className="upper-footer-block">
+      <div className={style.upperFooterBlock}>
         {" "}
         {/* form div*/}
-        <form className="email-form">
+        <form className={style.emailForm}>
           <label htmlFor="email">get in touch with us:</label>
           <input type="email" id="email" name="email" />
           <button type="submit" className="btn btn-warning">
             Submit
           </button>
         </form>
-        <section className="lists-block">
+        <section className={style.listsBlock}>
           {" "}
           {/*lists */}
           <div>
@@ -42,30 +43,30 @@ export default function Footer() {
           </div>
         </section>
       </div>
-      <div className="social-media-list">
-        <div className="social-media-block">
+      <div className={style.socialMediaList}>
+        <div className={style.socialMediaBlock}>
           <span>We are in social media</span>
           <div style={{ display: "flex", flexDirection: "row" }}>
             <a href="https://www.youtube.com/" target="_blank">
-              <img src={youtube} className="social-media-img" />
+              <img src={youtube} className={style.socialMediaImg} />
             </a>
             <a href="https://www.youtube.com/" target="_blank">
-              <img src={youtube} className="social-media-img" />
+              <img src={youtube} className={style.socialMediaImg} />
             </a>
             <a href="https://www.youtube.com/" target="_blank">
-              <img src={youtube} className="social-media-img" />
+              <img src={youtube} className={style.socialMediaImg} />
             </a>
             <a href="https://www.youtube.com/" target="_blank">
-              <img src={youtube} className="social-media-img" />
+              <img src={youtube} className={style.socialMediaImg} />
             </a>
             <a href="https://www.youtube.com/" target="_blank">
-              <img src={youtube} className="social-media-img" />
+              <img src={youtube} className={style.socialMediaImg} />
             </a>
           </div>
         </div>
         <div>{/*hotline number*/}</div>
       </div>
-      <div className="lower-footer-block">
+      <div className={style.lowerFooterBlock}>
         <span>&copy AO "Imart" 2002-2023</span>
         <div></div>
         <span>privacy policy</span>

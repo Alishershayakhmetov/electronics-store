@@ -1,4 +1,4 @@
-.email-form {
+.emailForm {
     display: flex;
     flex-direction: column;
     flex: 3;
@@ -6,30 +6,30 @@
     align-items: center;
     text-align: center;
 }
-.upper-footer-block {
+.upperFooterBlock {
     display: flex;
     flex-direction: row;
 }
-.lists-block {
+.listsBlock {
     display: flex;
     flex-direction: row;
     flex: 7;
     justify-content: space-evenly;
 }
-.social-media-list {
+.socialMediaList {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.social-media-block {
+.socialMediaBlock {
     display: flex;
     flex-direction: column;
 }
-.social-media-img {
+.socialMediaImg {
     width: 60px;
     height: auto;
 }
-.lower-footer-block {
+.lowerFooterBlock {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
