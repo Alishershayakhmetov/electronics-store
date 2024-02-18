@@ -1,0 +1,16 @@
+.filter-div {
+    width: 296px;
+    padding: 24px 16px;
+    background-color: #fff;
+    border-radius: 16px
+}
+.filter-ul {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+.filter-ul li:not(:first-child) {
+    margin-top: 32px;
+}

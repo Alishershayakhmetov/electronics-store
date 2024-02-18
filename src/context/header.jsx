@@ -1,26 +1,32 @@
-import logo from '/logo-crop-jpeg.jpg';
-import rus from '../assets/ru.png';
-import kaz from '../assets/kz.png';
-import eng from '../assets/uk.webp';
+import logo from "/logo-crop-jpeg.jpg";
+import rus from "../assets/ru.png";
+import kaz from "../assets/kz.png";
+import eng from "../assets/uk.webp";
+import compare from "../assets/compare-icon.svg";
+import favourite from "../assets/wishlist-icon.svg";
+import basket from "../assets/cart-icon.svg";
+import profile from "../assets/profile-icon.webp";
 
 export default function Header() {
-
   let cityWindow = "city-window";
 
   function handleCityClick() {
-    if(cityWindow === "city-window") {
-      
+    if (cityWindow === "city-window") {
     } else {
-
     }
   }
 
-  return(
-    <header className="header">
+  return (
+    <header className="header" style={{ backgroundColor: "#7DF9FF" }}>
       <section className="upper-header">
         <div className="left-div">
-          <div style={{"marginLeft" : "5px"}}>
-            <button onClick={() => handleCityClick(cityWindow)}>City</button>
+          <div style={{ marginLeft: "5px" }}>
+            <button
+              onClick={() => handleCityClick(cityWindow)}
+              className="btn btn-primary"
+            >
+              City
+            </button>
             <div className={cityWindow}>
               <ul>
                 <li>Объект 1</li>
@@ -30,16 +36,17 @@ export default function Header() {
             </div>
           </div>
           <div>
-            <button>
-              <a href="/addresses">
+            <button className="btn btn-secondary">
+              <a
+                href="/addresses"
+                style={{ textDecoration: "none", color: "white" }}
+              >
                 Addresses
               </a>
             </button>
           </div>
           <div>
-            <button>
-              Theme
-            </button>
+            <button className="btn btn-dark">Theme</button>
           </div>
         </div>
         <div className="right-lang-div">
@@ -50,7 +57,7 @@ export default function Header() {
           <button className="lang-button btn btn-outline-secondary">
             <img src={kaz} width="25" height="25" />
             <span>Kaz</span>
-          </button>  
+          </button>
           <button className="lang-button btn btn-outline-primary">
             <img src={eng} width="25" height="25" />
             <span>Eng</span>
@@ -59,13 +66,13 @@ export default function Header() {
       </section>
       <section className="lower-header">
         <div className="left-lower-div">
-          <div style={{"marginLeft" : "5px"}}>
+          <div style={{ marginLeft: "5px" }}>
             <a href="#">
               <img className="logo" src={logo} />
             </a>
           </div>
           <div>
-            <button>
+            <button className="btn btn-info">
               <img />
               Catalogue
             </button>
@@ -75,69 +82,34 @@ export default function Header() {
           <input></input>
         </div>
         <div>
-          <button>
-            <img />
-            <p></p>
-          </button>
-          <button>
-            <img />
-            <p></p>
-          </button>
-          <button>
-            <img />
-            <p></p>
-          </button>
-          <button>
-            <img />
-            <p></p>
-          </button>
+          <div className="wrapper">
+            <a>
+              <div className="icon-div">
+                <img src={favourite} height={24} width={25}></img>
+              </div>
+              <span>Favourite</span>
+            </a>
+            <a>
+              <div className="icon-div">
+                <img src={compare} height={24} width={25}></img>
+              </div>
+              <span>Compare</span>
+            </a>
+            <a>
+              <div className="icon-div">
+                <img src={basket} height={24} width={25}></img>
+              </div>
+              <span>Cart</span>
+            </a>
+            <a>
+              <div className="icon-div">
+                <img src={profile} height={24} width={25}></img>
+              </div>
+              <span>Log In</span>
+            </a>
+          </div>
         </div>
       </section>
     </header>
-  )
+  );
 }
-
-
-
-/*
-export default function Header() {
-  return(
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">Navbar scroll</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarScroll">
-        <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{"--bs-scroll-height": "100px"}}>
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Link
-              </a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">Link</a>
-            </li>
-          </ul>
-          <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    );
-}
-*/

@@ -60,3 +60,16 @@
     align-items: center; /* Aligns items vertically */
     /* flex-wrap: wrap; // Uncomment this to enable wrapping */
   }
+.icon-div {
+    position: relative;
+    height: 24px;
+    margin-bottom: 4px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    align-items: center;
+    text-align: center
+}

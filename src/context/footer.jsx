@@ -2,7 +2,7 @@ import youtube from "../assets/youtube.png";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer style={{ backgroundColor: "#15A3C7" }}>
       <div className="upper-footer-block">
         {" "}
         {/* form div*/}
