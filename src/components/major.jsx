@@ -16,7 +16,7 @@ import style from "../css/major.module.css";
 
 export default function Major() {
   return (
-    <main style={{ backgroundColor: "#09D0EF" }}>
+    <main style={{ backgroundColor: "#F0F1F2" }}>
       <section className={style.containerBlock}>
         <div className={style.adBlock}>
           <img src={ad} className={style.ad} />

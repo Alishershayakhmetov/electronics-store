@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import logo from "/logo-crop-jpeg.jpg";
 import rus from "../assets/ru.png";
 import kaz from "../assets/kz.png";
@@ -8,34 +10,26 @@ import basket from "../assets/cart-icon.svg";
 import profile from "../assets/profile-icon.webp";
 
 import style from "../css/header.module.css";
+import CityModal from "../components/citymodal";
 
 export default function Header() {
-  let cityWindow = "city-window";
-
-  function handleCityClick() {
-    if (cityWindow === "city-window") {
-    } else {
-    }
-  }
+  const [openCityModal, setOpenCityModal] = useState(false);
 
   return (
-    <header className={style.header} style={{ backgroundColor: "#7DF9FF" }}>
+    <header className={style.header}>
       <section className={style.upperHeader}>
         <div className={style.leftDiv}>
           <div style={{ marginLeft: "5px" }}>
+            <CityModal
+              open={openCityModal}
+              onClose={() => setOpenCityModal(false)}
+            />
             <button
-              onClick={() => handleCityClick(cityWindow)}
+              onClick={() => setOpenCityModal(true)}
               className="btn btn-primary"
             >
               City
             </button>
-            <div className={style.cityWindow}>
-              <ul>
-                <li>Объект 1</li>
-                <li>Объект 2</li>
-                <li>Объект 3</li>
-              </ul>
-            </div>
           </div>
           <div>
             <button className="btn btn-secondary">
