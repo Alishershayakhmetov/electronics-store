@@ -16,16 +16,21 @@ export default function Header() {
   const [openCityModal, setOpenCityModal] = useState(false);
 
   return (
-    <header className={style.header}>
+    <header className={style.header} style={{ paddingBottom: "20px" }}>
       <section className={style.upperHeader}>
         <div className={style.leftDiv}>
           <div style={{ marginLeft: "5px" }}>
             <CityModal
               open={openCityModal}
-              onClose={() => setOpenCityModal(false)}
+              onClose={() => {
+                setOpenCityModal(false);
+              }}
             />
             <button
-              onClick={() => setOpenCityModal(true)}
+              onClick={() => {
+                setOpenCityModal(true);
+                document.body.style.overflow = "hidden"; // Prevent scrolling
+              }}
               className="btn btn-primary"
             >
               City
@@ -74,8 +79,15 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div>
-          <input></input>
+        <div className={style.inputContainer}>
+          <form>
+            {" "}
+            {/* */}
+            <label className={style.inputLabel}>
+              <input className={style.inputInput} placeholder="Find..."></input>
+              <svg></svg>
+            </label>
+          </form>
         </div>
         <div>
           <div className={style.wrapper}>

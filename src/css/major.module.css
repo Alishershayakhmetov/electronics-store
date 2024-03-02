@@ -18,10 +18,13 @@
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 4px;
 }
 .goodBlock {
   overflow: hidden;
   max-width: 20%;
+  background-color: #FFF;
+  border-radius: 8px;
 }
 .goodImgBlock {
   max-width: 50%;
@@ -33,6 +36,7 @@
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 12px;
 }
 .descriptionBlock {
   overflow: hidden;
@@ -66,6 +70,7 @@
   flex-direction: column;
   margin: 0 auto;
   max-width: 1232px;
+  padding-top: 10px;
 }
 .buttonSet {
   display: flex;
@@ -103,6 +108,7 @@
 }
 .gridProductBlock {
   display: grid;
+  padding: 10px 0;
   gap: 20px;
   grid-template-columns: repeat(6,calc((100% - 40px) / 6));
 }
@@ -112,8 +118,10 @@
   margin: 0 auto;
 }
 .gridItemBlock {
-  width: 150px;
-  height: 390px;
+  padding: 12px;
+  border-radius: 8px;
+  width: 180px;
+  background-color: #FFF;
 }
 .imgBlock {
   margin: 0 auto;

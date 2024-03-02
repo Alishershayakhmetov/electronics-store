@@ -16,7 +16,13 @@ import style from "../css/major.module.css";
 
 export default function Major() {
   return (
-    <main style={{ backgroundColor: "#F0F1F2" }}>
+    <main
+      style={{
+        backgroundColor: "#F0F1F2",
+        paddingTop: "20px",
+        paddingBottom: "20px",
+      }}
+    >
       <section className={style.containerBlock}>
         <div className={style.adBlock}>
           <img src={ad} className={style.ad} />

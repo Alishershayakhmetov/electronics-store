@@ -3,7 +3,7 @@ import style from "../css/footer.module.css";
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: "#FFFFFF" }}>
+    <footer style={{ backgroundColor: "#FFFFFF", paddingTop: "20px" }}>
       <div className={style.upperFooterBlock}>
         {" "}
         {/* form div*/}

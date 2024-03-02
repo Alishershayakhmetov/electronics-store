@@ -54,7 +54,13 @@ export default function CityModal({ open, onClose }) {
     "Atbasar",
   ];
   return (
-    <div onClick={onClose} className={style.overlay}>
+    <div
+      onClick={() => {
+        onClose();
+        document.body.style.overflow = "auto"; // Restore scrolling
+      }}
+      className={style.overlay}
+    >
       <div
         onClick={(e) => {
           e.stopPropagation();
@@ -69,7 +75,10 @@ export default function CityModal({ open, onClose }) {
             " " +
             style.resetBtnStyles
           }
-          onClick={onClose}
+          onClick={() => {
+            onClose();
+            document.body.style.overflow = "auto"; // Restore scrolling
+          }}
         >
           <svg
             fill="none"
