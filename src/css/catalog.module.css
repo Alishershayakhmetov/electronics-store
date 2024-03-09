@@ -1,6 +1,13 @@
 li {
     list-style: none;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: auto;
+    outline: none;
+  }
 .path {
     display: flex;
     flex-direction: row;

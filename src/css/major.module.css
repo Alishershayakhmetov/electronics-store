@@ -107,10 +107,14 @@
   outline: none;
 }
 .gridProductBlock {
-  display: grid;
+  display: flex;
   padding: 10px 0;
   gap: 20px;
-  grid-template-columns: repeat(6,calc((100% - 40px) / 6));
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 .productImg {
   width: 140px;
@@ -122,6 +126,8 @@
   border-radius: 8px;
   width: 180px;
   background-color: #FFF;
+  align-items: center;
+  text-align: center;
 }
 .imgBlock {
   margin: 0 auto;

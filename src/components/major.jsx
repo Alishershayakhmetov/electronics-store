@@ -15,6 +15,31 @@ import microsoft from "../assets/microsoft.png";
 import style from "../css/major.module.css";
 
 export default function Major() {
+  const fridges = [];
+
+  for (let i = 0; i < 6; i++) {
+    fridges.push(
+      <div key={i} className={style.gridItemBlock}>
+        <a href="/fridge" className={style.clearDefaultA}>
+          <div className={style.imgBlock}>
+            <img src={fridge} className={style.productImg} />
+          </div>
+          <div className={style.descriptionBlock}>
+            <span className={style.description}>
+              Toshiba Fridge GR-RB449WE-PMJ(06)
+            </span>
+            <h2 className={style.price}>359 990 ₸</h2>
+          </div>
+          <div className={style.centerButton}>
+            <button className={style.goodButton + " btn btn-success"}>
+              <span className={style.buttonText}>Buy</span>
+            </button>
+          </div>
+        </a>
+      </div>
+    );
+  }
+
   return (
     <main
       style={{
@@ -92,118 +117,8 @@ export default function Major() {
           </div>
         </div>
 
-        <div className={style.gridProductBlock}>
-          <a href="/fridge" className={style.clearDefaultA}>
-            <div className={style.gridItemBlock}>
-              <div className={style.imgBlock}>
-                <img src={fridge} className={style.productImg} />
-              </div>
-              <div className={style.descriptionBlock}>
-                <span className={style.description}>
-                  Toshiba Fridge GR-RB449WE-PMJ(06)
-                </span>
-                <h2 className={style.price}>359 990 ₸</h2>
-              </div>
-              <div className={style.centerButton}>
-                <button className={style.goodButton + " btn btn-success"}>
-                  <span className={style.buttonText}>Buy</span>
-                </button>
-              </div>
-            </div>
-          </a>
-          <a href="/fridge" className={style.clearDefaultA}>
-            <div className={style.gridItemBlock}>
-              <div className={style.imgBlock}>
-                <img src={fridge} className={style.productImg} />
-              </div>
-              <div className={style.descriptionBlock}>
-                <span className={style.description}>
-                  Toshiba Fridge GR-RB449WE-PMJ(06)
-                </span>
-                <h2 className={style.price}>359 990 ₸</h2>
-              </div>
-              <div className={style.centerButton}>
-                <button className={style.goodButton + " btn btn-success"}>
-                  <span className={style.buttonText}>Buy</span>
-                </button>
-              </div>
-            </div>
-          </a>
-          <a href="/fridge" className={style.clearDefaultA}>
-            <div className={style.gridItemBlock}>
-              <div className={style.imgBlock}>
-                <img src={fridge} className={style.productImg} />
-              </div>
-              <div className={style.descriptionBlock}>
-                <span className={style.description}>
-                  Toshiba Fridge GR-RB449WE-PMJ(06)
-                </span>
-                <h2 className={style.price}>359 990 ₸</h2>
-              </div>
-              <div className={style.centerButton}>
-                <button className={style.goodButton + " btn btn-success"}>
-                  <span className={style.buttonText}>Buy</span>
-                </button>
-              </div>
-            </div>
-          </a>
-          <a href="/fridge" className={style.clearDefaultA}>
-            <div className={style.gridItemBlock}>
-              <div className={style.imgBlock}>
-                <img src={fridge} className={style.productImg} />
-              </div>
-              <div className={style.descriptionBlock}>
-                <span className={style.description}>
-                  Toshiba Fridge GR-RB449WE-PMJ(06)
-                </span>
-                <h2 className={style.price}>359 990 ₸</h2>
-              </div>
-              <div className={style.centerButton}>
-                <button className={style.goodButton + " btn btn-success"}>
-                  <span className={style.buttonText}>Buy</span>
-                </button>
-              </div>
-            </div>
-          </a>
-          <a href="/fridge" className={style.clearDefaultA}>
-            <div className={style.gridItemBlock}>
-              <div className={style.imgBlock}>
-                <img src={fridge} className={style.productImg} />
-              </div>
-              <div className={style.descriptionBlock}>
-                <span className={style.description}>
-                  Toshiba Fridge GR-RB449WE-PMJ(06)
-                </span>
-                <h2 className={style.price}>359 990 ₸</h2>
-              </div>
-              <div className={style.centerButton}>
-                <button className={style.goodButton + " btn btn-success"}>
-                  <span className={style.buttonText}>Buy</span>
-                </button>
-              </div>
-            </div>
-          </a>
-          <a href="/fridge" className={style.clearDefaultA}>
-            <div className={style.gridItemBlock}>
-              <div className={style.imgBlock}>
-                <img src={fridge} className={style.productImg} />
-              </div>
-              <div className={style.descriptionBlock}>
-                <span className={style.description}>
-                  Toshiba Fridge GR-RB449WE-PMJ(06)
-                </span>
-                <h2 className={style.price}>359 990 ₸</h2>
-              </div>
-              <div className={style.centerButton}>
-                <button className={style.goodButton + " btn btn-success"}>
-                  <span className={style.buttonText}>Buy</span>
-                </button>
-              </div>
-            </div>
-          </a>
-        </div>
+        <div className={style.gridProductBlock}>{fridges}</div>
       </div>
-
       <div className={style.benefits}>
         <div className={style.benefitBlock}>
           <div className={style.imgBlock}>
