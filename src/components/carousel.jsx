@@ -15,45 +15,47 @@ const ImageCarousel = ({ images }) => {
   };
 
   return (
-    <div className={style.carouselContainer}>
-      <ul className={style.carousel}>
-        {images.map((image, index) => (
-          <li
-            key={index}
-            className={
-              index === currentIndex
-                ? style.slide + " " + style.active
-                : style.slide
-            }
-          >
-            <img
-              src={"../src/assets/notebook/" + image.src}
-              alt={image.alt}
-              style={{ width: "500px", height: "300px" }}
-            />
-          </li>
-        ))}
-      </ul>
-      <ul className={style.carousel}>
-        {images.map((image, index) => {
-          return (
+    <div>
+      <div className={style.carouselContainer}>
+        <ul className={style.carousel}>
+          {images.map((image, index) => (
             <li
               key={index}
               className={
-                style.slide + " " + style.active + " " + style.smallBlock
+                index === currentIndex
+                  ? style.slide + " " + style.active
+                  : style.slide
               }
             >
               <img
-                src={"/src/assets/notebook/" + image.src}
+                src={"../src/assets/notebook/" + image.src}
                 alt={image.alt}
-                className={style.smallBlock + " " + style.smallImg}
+                style={{ width: "500px", height: "300px" }}
               />
             </li>
-          );
-        })}
-      </ul>
-      <button onClick={prevSlide}>Prev</button>
-      <button onClick={nextSlide}>Next</button>
+          ))}
+        </ul>
+        <ul className={style.carousel}>
+          {images.map((image, index) => {
+            return (
+              <li
+                key={index}
+                className={
+                  style.slide + " " + style.active + " " + style.smallBlock
+                }
+              >
+                <img
+                  src={"/src/assets/notebook/" + image.src}
+                  alt={image.alt}
+                  className={style.smallBlock + " " + style.smallImg}
+                />
+              </li>
+            );
+          })}
+        </ul>
+        <button onClick={prevSlide}>Prev</button>
+        <button onClick={nextSlide}>Next</button>
+      </div>
     </div>
   );
 };

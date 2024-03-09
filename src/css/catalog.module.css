@@ -7,11 +7,6 @@ a {
     background-color: transparent;
     cursor: auto;
     outline: none;
-  }
-.path {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
 }
 .catalogFirst {
     display: grid;

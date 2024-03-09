@@ -1,4 +1,5 @@
 import style from "../css/catalog.module.css";
+import PathMaker from "./pathMaker";
 
 function CatalogItem({ number }) {
   const cateloriesPhotoURL = [
@@ -64,38 +65,13 @@ function CatalogItem({ number }) {
 
 export default function Catalog() {
   const path = ["main", "all categories"];
-  const arrow = (
-    <svg
-      style={{ margin: "0 2px", width: "16px", height: "16px" }}
-      fill="none"
-      stroke="true"
-      viewBox="0 0 24 24 "
-    >
-      <path
-        d="M8 19.84L14.52 13.32C15.29 12.55 15.29 11.29 14.52 10.52L8 4"
-        stroke="#606971"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeMiterlimit="10"
-        strokeWidth="1.5"
-      ></path>
-    </svg>
-  );
 
   return (
     <section
       style={{ backgroundColor: "rgb(240, 241, 242)", padding: "20px 0" }}
     >
       <div>
-        <ul className={style.path}>
-          {/*storing product path in the website */}
-          {path.map((e, i) => (
-            <li key={i}>
-              <a>{e}</a>
-              {i + 1 !== path.length && arrow}
-            </li>
-          ))}
-        </ul>
+        <PathMaker path={path} />
         <ul className={style.catalogFirst}>
           <CatalogItem number={14} />
         </ul>

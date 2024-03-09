@@ -68,7 +68,7 @@ export default function Header() {
       <section className={style.lowerHeader}>
         <div className={style.leftLowerDiv}>
           <div style={{ marginLeft: "5px" }}>
-            <a href="#">
+            <a href="/#">
               <img className={style.logo} src={logo} />
             </a>
           </div>

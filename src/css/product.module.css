@@ -6,9 +6,8 @@
 .article {
     display: flex;
     flex-direction: row;
-    margin: auto auto;
+    margin: auto;
     max-width: 1260px;
-    justify-content: space-between;
 }
 .productName {
   overflow: hidden;
@@ -16,11 +15,28 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
-.productBlock {
+.productContainer {
     max-width: 100%;
+    margin-right: 16px;
 }
+.productBlock {
+    background-color: #FFFFFF;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.productBlock:last-child {
+    margin-bottom: 0;
+}
+
 .priceBlock {
     max-width: 300px;
+    background-color: #FFFFFF;
+    padding: 16px;
+    height: fit-content;
+    position: sticky;
+    top: 92px;
+    border-radius: 12px;
 }
 .btnBlock {
     display: flex;
@@ -32,21 +48,5 @@
 .productInfo {
     display: flex;
     flex-direction: row;
-}
-.descriptionHeader {
-    color: #464c53;
-    font-weight: 600;
-}
-.descriptionInfo {
-    display: flex;
-    flex-direction: column;
-}
-.descriptionItem {
-    display: flex;
-    flex-direction: row;
-}
-.dotDiv {
-    width: 100%;
-    /*flex: 1 0 auto;*/
-    border-bottom: 2px dotted gray;
+    justify-content: space-between;
 }

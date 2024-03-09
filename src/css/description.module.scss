@@ -1,0 +1,22 @@
+$title-color: #464c53;
+$dot: rgb(128,128,128);
+
+.descriptionHeader {
+    color: $title-color;
+    font-weight: 600;
+}
+.descriptionInfo {
+    display: flex;
+    flex-direction: column;
+}
+.descriptionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.dotDiv {
+    width: 100%;
+    border-bottom: 2px dotted $dot;
+    padding-top: 12px;
+}

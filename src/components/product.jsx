@@ -1,6 +1,9 @@
 import React from "react";
 import ImageCarousel from "./carousel";
 import style from "../css/product.module.css";
+import PathMaker from "./pathMaker";
+import Description from "./descriptions";
+import Characteristics from "./characteristics";
 
 export default function Product() {
   const images = [
@@ -11,69 +14,84 @@ export default function Product() {
     { src: "5.webp", alt: "image 5" },
   ];
 
+  const description = {
+    "Display size": 15.6,
+    "Processor series": "Intel Core I5",
+    "Processor model": "12500H",
+    "Operational memory, Gb": "16",
+  };
+
+  const path = ["main", "computers", "asus"];
+
+  const characteristics = {
+    Memory: {
+      "SSD storage capacity, GB": 512,
+      "Drive type": "SSD",
+      "Number of M.2 slots": 2,
+      "RAM capacity, GB": 16,
+    },
+    Video: {
+      "Video card model": "NGF RTX 3050",
+      "Video memory capacity, GB": 4,
+      "Video card type": "Discrete",
+    },
+    dimensions: {
+      "Width, mm": 354,
+      "Thickness, mm": 249,
+      "Length, mm": 251,
+      "Weight, kg": 2.2,
+      "Housing material": "Plastic",
+    },
+    Interfaces: {
+      "Connectors on the housing":
+        "HDMI, Jack 3.5 mm, LAN разъем, RJ45, Thunderbolt 4, USB 3.2 Gen 2",
+    },
+    Display: {
+      "Display resolution": "1920x1080 Full HD",
+      "Display diagonal, inch": 15.6,
+      "Brightness (Nit)": 250,
+      "Screen refresh rate": "144Hz",
+      "Screen matrix type": "IPS",
+    },
+    "Main features": {
+      Series: "Asus TUF Gaming F15",
+      "Notebook class": "For games and production",
+    },
+    Processor: {
+      "Processor manufacturer": "Intel",
+      "Processor model": "12500H",
+      "Количество ядер": 12,
+      "Integrated graphics core": "Intel Iris Xe Graphics",
+      "Processor series": "Intel Core I5",
+      "Processor frequency, GHz": 2.5,
+      Generation: "12st generation (Alder Lake)",
+    },
+    "Additional features": {
+      "Built-in webcam": "HD",
+      "Keyboard backlighting": "Yes",
+      "Functions and features": "Aura Sync, Dolby Atmos",
+    },
+    "Operational system (OS)": {
+      "Operational system": "DOS",
+    },
+    "Network connections": {
+      Bluetooth: "Yes",
+      "Wi-Fi support": "Yes",
+    },
+  };
+
   return (
-    <>
-      <ul className={style.path}>
-        {" "}
-        {/*storing product path in the website */}
-        <li>
-          <a>main</a>
-          <svg
-            style={{ margin: "0 2px", width: "16px", height: "16px" }}
-            fill="none"
-            stroke="true"
-            viewBox="0 0 24 24 "
-          >
-            <path
-              d="M8 19.84L14.52 13.32C15.29 12.55 15.29 11.29 14.52 10.52L8 4"
-              stroke="#606971"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeMiterlimit="10"
-              strokeWidth="1.5"
-            ></path>
-          </svg>
-        </li>
-        <li>
-          <a>stereo</a>
-          <svg
-            style={{ margin: "0 2px", width: "16px", height: "16px" }}
-            fill="none"
-            stroke="true"
-            viewBox="0 0 24 24 "
-          >
-            <path
-              d="M8 19.84L14.52 13.32C15.29 12.55 15.29 11.29 14.52 10.52L8 4"
-              stroke="#606971"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeMiterlimit="10"
-              strokeWidth="1.5"
-            ></path>
-          </svg>
-        </li>
-        <li>
-          <a>page</a>
-          <svg
-            style={{ margin: "0 2px", width: "16px", height: "16px" }}
-            fill="none"
-            stroke="true"
-            viewBox="0 0 24 24 "
-          >
-            <path
-              d="M8 19.84L14.52 13.32C15.29 12.55 15.29 11.29 14.52 10.52L8 4"
-              stroke="#606971"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeMiterlimit="10"
-              strokeWidth="1.5"
-            ></path>
-          </svg>
-        </li>
-      </ul>
+    <div
+      style={{
+        backgroundColor: "#F0F1F2",
+        paddingTop: "20px",
+        paddingBottom: "20px",
+      }}
+    >
+      <PathMaker path={path} />
       <article className={style.article}>
-        <div className={style.productBlock}>
-          <div>
+        <div className={style.productContainer}>
+          <div className={style.productBlock}>
             <div>
               <h2 className={style.productName}>
                 Игровой ноутбук Asus TUF Gaming F15 i5 12500H/ 16ГБ / 512SSD /
@@ -81,20 +99,12 @@ export default function Product() {
               </h2>
             </div>
             <div className={style.productInfo}>
-              <div>
-                <ImageCarousel images={images} />
-              </div>
-              <div>
-                <p className={style.descriptionHeader}>Description:</p>
-                <div className={style.descriptionInfo}>
-                  <div className={style.descriptionItem}>
-                    <div>Display size</div>
-                    <div className={style.dotDiv}></div>
-                    <div>15.6</div>
-                  </div>
-                </div>
-              </div>
+              <ImageCarousel images={images} />
+              <Description description={description} />
             </div>
+          </div>
+          <div className={style.productBlock}>
+            <Characteristics data={characteristics} />
           </div>
         </div>
         <div className={style.priceBlock}>
@@ -144,6 +154,6 @@ export default function Product() {
           </div>
         </div>
       </article>
-    </>
+    </div>
   );
 }
