@@ -1,5 +1,5 @@
-import youtube from "../assets/youtube.png";
-import style from "../css/footer.module.css";
+import youtube from "../../assets/youtube.png";
+import style from "./footer.module.css";
 
 export default function Footer() {
   return (

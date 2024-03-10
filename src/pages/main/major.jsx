@@ -1,18 +1,18 @@
-import phone from "../assets/phone.png";
-import ad from "../assets/ad.png";
-import fridge from "../assets/fridge.png";
-import delivery from "../assets/delivery.png";
-import warranty from "../assets/warranty.png";
-import aboutUs from "../assets/aboutus.png";
+import phone from "../../assets/phone.png";
+import ad from "../../assets/ad.png";
+import fridge from "../../assets/fridge.png";
+import delivery from "../../assets/delivery.png";
+import warranty from "../../assets/warranty.png";
+import aboutUs from "../../assets/aboutus.png";
 
-import acer from "../assets/acer.png";
-import xiaomi from "../assets/xiaomi.png";
-import hp from "../assets/hp.png";
-import huawei from "../assets/huawei.png";
-import iphone from "../assets/apple_logo_black.svg";
-import microsoft from "../assets/microsoft.png";
+import acer from "../../assets/acer.png";
+import xiaomi from "../../assets/xiaomi.png";
+import hp from "../../assets/hp.png";
+import huawei from "../../assets/huawei.png";
+import iphone from "../../assets/apple_logo_black.svg";
+import microsoft from "../../assets/microsoft.png";
 
-import style from "../css/major.module.css";
+import style from "./major.module.css";
 
 export default function Major() {
   const fridges = [];

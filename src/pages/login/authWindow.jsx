@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import style from "../css/authWindow.module.css";
+import style from "./authWindow.module.css";
 
 export default function AuthWindow() {
   const [logIn, setLogIn] = useState(true);

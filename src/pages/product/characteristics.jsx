@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import style from "../css/characteristics.module.scss";
+import style from "./characteristics.module.scss";
 
 export default function Characteristics({ data }) {
   const [collapsed, setCollapsed] = useState(true);

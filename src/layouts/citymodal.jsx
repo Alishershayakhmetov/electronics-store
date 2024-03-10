@@ -1,4 +1,4 @@
-import style from "../css/citymodal.module.scss";
+import style from "./citymodal.module.scss";
 
 export default function CityModal({ open, onClose }) {
   if (!open) return null;

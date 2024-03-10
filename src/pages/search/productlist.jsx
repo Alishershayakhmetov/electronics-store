@@ -1,5 +1,5 @@
-import qwerty from "../assets/9999.webp";
-import style from "../css/productlist.module.css";
+import qwerty from "../../assets/9999.webp";
+import style from "./productlist.module.css";
 
 function Product({ number }) {
   const generateProduct = () => {

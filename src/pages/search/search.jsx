@@ -1,6 +1,6 @@
 import SearchFilter from "./searchfilter";
 import ProductList from "./productlist";
-import style from "../css/search.module.css";
+import style from "./search.module.css";
 
 export default function Search() {
   return (

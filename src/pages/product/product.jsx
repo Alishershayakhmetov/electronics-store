@@ -1,7 +1,7 @@
 import React from "react";
 import ImageCarousel from "./carousel";
-import style from "../css/product.module.css";
-import PathMaker from "./pathMaker";
+import style from "./product.module.css";
+import PathMaker from "../../components/pathmaker/pathMaker";
 import Description from "./descriptions";
 import Characteristics from "./characteristics";
 

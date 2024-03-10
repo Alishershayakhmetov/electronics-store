@@ -1,6 +1,6 @@
-import style from "../css/auth.module.css";
+import style from "./auth.module.css";
 
-import AuthWindow from "../components/authWindow";
+import AuthWindow from "./authWindow";
 
 export default function AuthPage() {
   return (

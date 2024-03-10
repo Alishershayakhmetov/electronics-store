@@ -1,4 +1,4 @@
-import style from "../css/searchfilter.module.css";
+import style from "./searchfilter.module.css";
 
 export default function SearchFilter() {
   return (

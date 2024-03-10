@@ -1,4 +1,4 @@
-import style from "../css/pathMaker.module.scss";
+import style from "./pathMaker.module.scss";
 
 export default function PathMaker({ path }) {
   const arrow = (

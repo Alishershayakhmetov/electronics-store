@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import MainPage from "./pages/mainpage";
-import ProductPage from "./pages/productpage";
-import Auth from "./pages/auth";
-import Error404Page from "./pages/404page";
-import CatalogPage from "./pages/catalogpage";
-import SearchPage from "./pages/searchpage";
+import MainPage from "./pages/main/mainpage";
+import ProductPage from "./pages/product/productpage";
+import Auth from "./pages/login/auth";
+import Error404Page from "./pages/404page/404page";
+import CatalogPage from "./pages/catalog/catalogpage";
+import SearchPage from "./pages/search/searchpage";
 
 const App = () => {
   return (

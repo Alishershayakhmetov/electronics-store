@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 import logo from "/logo-crop-jpeg.jpg";
-import rus from "../assets/ru.png";
-import kaz from "../assets/kz.png";
-import eng from "../assets/uk.webp";
-import compare from "../assets/compare-icon.svg";
-import favourite from "../assets/wishlist-icon.svg";
-import basket from "../assets/cart-icon.svg";
-import profile from "../assets/profile-icon.webp";
+import rus from "../../assets/ru.png";
+import kaz from "../../assets/kz.png";
+import eng from "../../assets/uk.webp";
+import compare from "../../assets/compare-icon.svg";
+import favourite from "../../assets/wishlist-icon.svg";
+import basket from "../../assets/cart-icon.svg";
+import profile from "../../assets/profile-icon.webp";
 
-import style from "../css/header.module.css";
-import CityModal from "../components/citymodal";
+import style from "./header.module.css";
+import CityModal from "../../layouts/citymodal";
 
 export default function Header() {
   const [openCityModal, setOpenCityModal] = useState(false);
@@ -68,7 +68,7 @@ export default function Header() {
       <section className={style.lowerHeader}>
         <div className={style.leftLowerDiv}>
           <div style={{ marginLeft: "5px" }}>
-            <a href="/#">
+            <a href="/">
               <img className={style.logo} src={logo} />
             </a>
           </div>
