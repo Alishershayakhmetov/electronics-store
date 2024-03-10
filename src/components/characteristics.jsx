@@ -1,10 +1,29 @@
+import { useState, useRef } from "react";
 import style from "../css/characteristics.module.scss";
 
 export default function Characteristics({ data }) {
+  const [collapsed, setCollapsed] = useState(true);
+  const stretchButtonRef = useRef(null);
+
+  const handleStretchToggle = () => {
+    setCollapsed(!collapsed);
+    // If unstretching, scroll to the stretch button
+    if (!collapsed && stretchButtonRef.current) {
+      const { top } = stretchButtonRef.current.getBoundingClientRect();
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
       <h3>Characteristics</h3>
-      <div className={style.productTabs}>
+      <div
+        className={
+          collapsed
+            ? `${style.productTabs} ${style.collapsed}`
+            : style.productTabs
+        }
+      >
         <div className={style.technicalSpecificationBlock}>
           {Object.keys(data).map((key) => (
             <div key={key} className={style.descriptionContainer}>
@@ -26,7 +45,14 @@ export default function Characteristics({ data }) {
           ))}
         </div>
       </div>
-      <button></button>
+      {collapsed && (
+        <div style={{ position: "relative" }}>
+          <div className={style.shadowBottom}></div>
+        </div>
+      )}
+      <button onClick={handleStretchToggle} ref={stretchButtonRef}>
+        Stretch
+      </button>
     </div>
   );
 }
