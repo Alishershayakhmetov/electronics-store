@@ -1,22 +1,73 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import MainPage from "./pages/main/mainpage";
-import ProductPage from "./pages/product/productpage";
-import Auth from "./pages/login/auth";
-import Error404Page from "./pages/404page/404page";
-import CatalogPage from "./pages/catalog/catalogpage";
-import SearchPage from "./pages/search/searchpage";
+import Header from "./components/header/header";
+import Major from "./pages/main/major";
+import Footer from "./components/footer/footer";
+import Product from "./pages/product/product";
+import Catalog from "./pages/catalog/catalog";
+import Search from "./pages/search/search";
+import Lang from "./hooks/language/language";
+import Error404 from "./pages/404page/404comp";
+import AuthWindow from "./pages/login/authWindow";
 
 const App = () => {
+  const { t, changeLanguage } = Lang();
+
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<MainPage />} />
-        <Route path="/product/:id" element={<ProductPage />} />
-        <Route exact path="/login" element={<Auth />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/catalog/123" element={<SearchPage />} />
-        <Route path="*" element={<Error404Page />} />
+        <Route
+          exact
+          path="/"
+          element={
+            <>
+              <Header t={t} changeLanguage={changeLanguage} />
+              <Major />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/product/:id"
+          element={
+            <>
+              <Header t={t} changeLanguage={changeLanguage} />
+              <Product />
+              <Footer />
+            </>
+          }
+        />
+        <Route exact path="/login" element={<AuthWindow />} />
+        <Route
+          path="/catalog"
+          element={
+            <>
+              <Header t={t} changeLanguage={changeLanguage} />
+              <Catalog />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/catalog/123"
+          element={
+            <>
+              <Header t={t} changeLanguage={changeLanguage} />
+              <Search />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <>
+              <Header t={t} changeLanguage={changeLanguage} />
+              <Error404 />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </Router>
   );

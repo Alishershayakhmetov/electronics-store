@@ -81,7 +81,7 @@ export default function Product() {
   };
 
   return (
-    <div
+    <main
       style={{
         backgroundColor: "#F0F1F2",
         paddingTop: "20px",
@@ -154,6 +154,6 @@ export default function Product() {
           </div>
         </div>
       </article>
-    </div>
+    </main>
   );
 }

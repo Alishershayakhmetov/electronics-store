@@ -12,7 +12,7 @@ import profile from "../../assets/profile-icon.webp";
 import style from "./header.module.css";
 import CityModal from "../../layouts/citymodal";
 
-export default function Header() {
+export default function Header({ t, changeLanguage }) {
   const [openCityModal, setOpenCityModal] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ export default function Header() {
               }}
               className="btn btn-primary"
             >
-              City
+              {t("City")}
             </button>
           </div>
           <div>
@@ -42,24 +42,33 @@ export default function Header() {
                 href="/addresses"
                 style={{ textDecoration: "none", color: "white" }}
               >
-                Addresses
+                {t("Addresses")}
               </a>
             </button>
           </div>
           <div>
-            <button className="btn btn-dark">Theme</button>
+            <button className="btn btn-dark">{t("Theme")}</button>
           </div>
         </div>
         <div className={style.rightLangDiv}>
-          <button className={style.langButton + " btn btn-outline-secondary"}>
+          <button
+            className={style.langButton + " btn btn-outline-secondary"}
+            onClick={() => changeLanguage("ru")}
+          >
             <img src={rus} width="25" height="25" />
             <span>Rus</span>
           </button>
-          <button className={style.langButton + " btn btn-outline-secondary"}>
+          <button
+            className={style.langButton + " btn btn-outline-secondary"}
+            onClick={() => changeLanguage("kz")}
+          >
             <img src={kaz} width="25" height="25" />
             <span>Kaz</span>
           </button>
-          <button className={style.langButton + " btn btn-outline-primary"}>
+          <button
+            className={style.langButton + " btn btn-outline-primary"}
+            onClick={() => changeLanguage("en")}
+          >
             <img src={eng} width="25" height="25" />
             <span>Eng</span>
           </button>
@@ -75,7 +84,7 @@ export default function Header() {
           <div>
             <button className="btn btn-info">
               <img />
-              Catalogue
+              {t("Catalogue")}
             </button>
           </div>
         </div>
@@ -84,7 +93,10 @@ export default function Header() {
             {" "}
             {/* */}
             <label className={style.inputLabel}>
-              <input className={style.inputInput} placeholder="Find..."></input>
+              <input
+                className={style.inputInput}
+                placeholder={t("Find...")}
+              ></input>
               <svg></svg>
             </label>
           </form>
@@ -95,25 +107,25 @@ export default function Header() {
               <div className={style.iconDiv}>
                 <img src={favourite} height={24} width={25}></img>
               </div>
-              <span>Favourite</span>
+              <span>{t("Favourite")}</span>
             </a>
             <a>
               <div className={style.iconDiv}>
                 <img src={compare} height={24} width={25}></img>
               </div>
-              <span>Compare</span>
+              <span>{t("Compare")}</span>
             </a>
             <a>
               <div className={style.iconDiv}>
                 <img src={basket} height={24} width={25}></img>
               </div>
-              <span>Cart</span>
+              <span>{t("Cart")}</span>
             </a>
             <a>
               <div className={style.iconDiv}>
                 <img src={profile} height={24} width={25}></img>
               </div>
-              <span>Log In</span>
+              <span>{t("Log In")}</span>
             </a>
           </div>
         </div>
