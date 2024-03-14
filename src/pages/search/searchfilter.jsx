@@ -1,15 +1,34 @@
+import ChooseGroup from "./filtergroup/choosegroup";
 import style from "./searchfilter.module.css";
 
 export default function SearchFilter() {
+  const data = [
+    [
+      "brand",
+      [
+        "Apple",
+        "Samsung",
+        "Huawei",
+        "Honor",
+        "Redmi",
+        "Tecno",
+        "Vivo",
+        "Xiaomi",
+        "ZTE",
+        "POCO",
+        "OPPO",
+      ],
+    ],
+    ["Series", ["MAc", "SmSAPG"]],
+  ];
+
   return (
-    <div className={style.filterDiv}>
-      <ul className={style.filterUl}>
-        <li>red</li>
-        <li>blue</li>
-        <li>blue</li>
-        <li>blue</li>
-        <li>blue</li>
-      </ul>
-    </div>
+    <ul className={style.filterUl}>
+      {data.map((e, i) => (
+        <li key={i}>
+          <ChooseGroup title={e[0]} data={e[1]} />
+        </li>
+      ))}
+    </ul>
   );
 }
