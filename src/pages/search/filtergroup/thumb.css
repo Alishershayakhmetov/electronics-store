@@ -1,0 +1,12 @@
+.thumb {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    cursor: grab;
+    background-color: #FFF;
+    border: 2px solid rgb(91, 91, 213);
+    top: -12px;
+}
+.thumb:focus-visible {
+    outline: blue auto 1px;
+}

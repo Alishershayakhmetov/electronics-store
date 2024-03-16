@@ -6,7 +6,7 @@ import Block from "../../components/block";
 
 export default function Search() {
   return (
-    <main style={{ paddingBottom: "16px", backgroundColor: "#F4F4F4" }}>
+    <main style={{ padding: "16px 0", backgroundColor: "#F4F4F4" }}>
       <section style={{ maxWidth: "1232px", margin: " auto " }}>
         <PathMaker path={["main", "smartphones"]} />
         <div className={style.catalogMainDiv}>
@@ -23,7 +23,9 @@ export default function Search() {
               {" "}
               {/* list of products */}
               <header> {/* sort */}</header>
-              <ProductList />
+              <Block>
+                <ProductList />
+              </Block>
               <div> {/* pagination */}</div>
             </article>
           </div>

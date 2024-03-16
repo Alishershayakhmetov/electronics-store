@@ -57,6 +57,7 @@ export default function ChooseGroup({ title, data }) {
           ></path>
         </svg>
       </button>
+
       <div className={buttonListClasses} ref={listRef}>
         {data.map((e, i) => (
           <a key={i} className={style.linkOption} href={`/${title}/${e}`}>
@@ -73,6 +74,7 @@ export default function ChooseGroup({ title, data }) {
           </a>
         ))}
       </div>
+
       {listHeight >= 150 && !toggled && (
         <button
           className={style.showAllBtn}
