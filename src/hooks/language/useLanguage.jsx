@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useTranslation, Trans } from "react-i18next";
 
-export default function Lang() {
+export default function useLanguage(options = {}) {
+  const { setLanguage = false } = options;
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -15,6 +16,5 @@ export default function Lang() {
     i18n.changeLanguage(lng);
     localStorage.setItem("preferredLanguage", lng);
   };
-
-  return { t, changeLanguage };
+  return setLanguage ? { t, changeLanguage } : { t };
 }

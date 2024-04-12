@@ -11,9 +11,12 @@ import profile from "../../assets/profile-icon.webp";
 
 import style from "./header.module.css";
 import CityModal from "../../layouts/citymodal";
+import useLanguage from "../../hooks/language/useLanguage";
+import { Link } from "react-router-dom";
 
-export default function Header({ t, changeLanguage }) {
+export default function Header() {
   const [openCityModal, setOpenCityModal] = useState(false);
+  const { t, changeLanguage } = useLanguage({ setLanguage: true });
 
   return (
     <header className={style.header} style={{ paddingBottom: "20px" }}>
@@ -77,15 +80,17 @@ export default function Header({ t, changeLanguage }) {
       <section className={style.lowerHeader}>
         <div className={style.leftLowerDiv}>
           <div style={{ marginLeft: "5px" }}>
-            <a href="/">
+            <Link to={"/"}>
               <img className={style.logo} src={logo} />
-            </a>
+            </Link>
           </div>
           <div>
-            <button className="btn btn-info">
-              <img />
-              {t("Catalogue")}
-            </button>
+            <Link to={"/catalog"}>
+              <button className="btn btn-info">
+                <img />
+                {t("Catalogue")}
+              </button>
+            </Link>
           </div>
         </div>
         <div className={style.inputContainer}>

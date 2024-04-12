@@ -9,13 +9,23 @@ import acer from "../../assets/acer.png";
 import xiaomi from "../../assets/xiaomi.png";
 import hp from "../../assets/hp.png";
 import huawei from "../../assets/huawei.png";
-import iphone from "../../assets/apple_logo_black.svg";
+import iphone from "../../assets/Apple_logo_black.svg";
 import microsoft from "../../assets/microsoft.png";
 
 import style from "./major.module.css";
+import useLanguage from "../../hooks/language/useLanguage";
 
 export default function Major() {
+  const { t } = useLanguage();
   const fridges = [];
+  const categories = [
+    "Popular",
+    "Phones",
+    "Computers",
+    "Fridges",
+    "Vacuum Cleaner",
+    "Wash Machines",
+  ];
 
   for (let i = 0; i < 6; i++) {
     fridges.push(
@@ -65,7 +75,7 @@ export default function Major() {
           <h2>799 990 ₸</h2>
           <div className={style.centerButton}>
             <button className={style.goodButton + " btn btn-success"}>
-              Buy
+              {t("Buy")}
             </button>
           </div>
         </section>
@@ -73,48 +83,15 @@ export default function Major() {
 
       <div className={style.chooseProduct}>
         <div className={style.buttonSet}>
-          <div className={style.buttonBlock}>
-            <button
-              className={"btn btn-outline-secondary " + style.categoryButton}
-            >
-              <span className={style.buttonText}>Popular</span>
-            </button>
-          </div>
-          <div className={style.buttonBlock}>
-            <button
-              className={"btn btn-outline-secondary " + style.categoryButton}
-            >
-              <span className={style.buttonText}>Phones</span>
-            </button>
-          </div>
-          <div className={style.buttonBlock}>
-            <button
-              className={"btn btn-outline-secondary " + style.categoryButton}
-            >
-              <span className={style.buttonText}>Computers</span>
-            </button>
-          </div>
-          <div className={style.buttonBlock}>
-            <button
-              className={"btn btn-outline-secondary " + style.categoryButton}
-            >
-              <span className={style.buttonText}>Fridges</span>
-            </button>
-          </div>
-          <div className={style.buttonBlock}>
-            <button
-              className={"btn btn-outline-secondary " + style.categoryButton}
-            >
-              <span className={style.buttonBlock}>Vacuum cleaners</span>
-            </button>
-          </div>
-          <div className={style.buttonBlock}>
-            <button
-              className={"btn btn-outline-secondary " + style.categoryButton}
-            >
-              <span className={style.buttonText}>Wash machines</span>
-            </button>
-          </div>
+          {categories.map((e, i) => (
+            <div className={style.buttonBlock} key={i}>
+              <button
+                className={"btn btn-outline-secondary " + style.categoryButton}
+              >
+                <span className={style.buttonText}>{t(e)}</span>
+              </button>
+            </div>
+          ))}
         </div>
 
         <div className={style.gridProductBlock}>{fridges}</div>
