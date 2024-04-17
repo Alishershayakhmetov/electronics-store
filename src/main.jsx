@@ -9,7 +9,7 @@ import translationKZ from "./locales/kz/translation.json";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import { ApiProvider } from "@reduxjs/toolkit/query/react";
-import { productsApi } from "./store/apiSlice";
+import { productsApi } from "./store/productSlice";
 
 const check = localStorage.getItem("preferredLanguage");
 

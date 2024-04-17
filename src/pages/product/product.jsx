@@ -7,7 +7,7 @@ import Characteristics from "./characteristics";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import useLanguage from "../../hooks/language/useLanguage";
-import { useGetProductQuery } from "../../store/apiSlice";
+import { useGetProductQuery } from "../../store/productSlice";
 
 export default function Product() {
   const urlpath = useLocation().pathname.slice(9);

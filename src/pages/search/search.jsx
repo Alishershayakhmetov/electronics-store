@@ -6,12 +6,27 @@ import Block from "../../components/block";
 import Pagination from "../../components/Pagination/pagination";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useGetCatalogQuery } from "../../store/catalogSlice";
+import { useLocation, useParams } from "react-router-dom";
 
 export default function Search() {
+  /*
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  */
+  const path = useLocation().pathname.slice(9);
+  const searchParams = new URLSearchParams(useLocation().search);
+  const pageNumber = parseInt(searchParams.get("page")) - 1 || 0;
 
+  const {
+    data: response,
+    error,
+    isError,
+    isLoading,
+  } = useGetCatalogQuery({ path, pageNumber });
+  console.log(response);
+  /*
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,13 +44,19 @@ export default function Search() {
 
     fetchData();
   }, []);
-
-  if (loading) {
+  */
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  if (error) {
-    return <div>Error: {error}</div>;
+  if (isError) {
+    return (
+      <>
+        <div>Error: {error.error}</div>
+        <div>{error.status}</div>
+        <div>Error fetching product data. Please try again later.</div>
+      </>
+    );
   }
 
   return (
@@ -57,12 +78,18 @@ export default function Search() {
               {/* list of products */}
               <header> {/* sort */}</header>
               <Block>
-                <ProductList data={products} />
+                {response &&
+                response.products &&
+                response.products.length > 0 ? (
+                  <ProductList data={response.products} />
+                ) : (
+                  <div>No products found</div>
+                )}
               </Block>
               <div>
                 {" "}
                 {/* pagination */}
-                <Pagination count={Math.ceil(products.length / 12)} />
+                <Pagination count={Math.ceil(response.totalProducts / 12)} />
               </div>
             </article>
           </div>

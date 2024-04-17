@@ -56,6 +56,12 @@ function ProductCarousel({ imageURLs }) {
 }
 
 function Product({ number, data }) {
+  console.log(data);
+  if (!data || data.length < number) {
+    // If data is undefined or does not have enough items, return null or loading indicator
+    return null; // or <div>Loading...</div>
+  }
+
   let lang = localStorage.getItem("preferredLanguage");
   lang = lang.charAt(0).toUpperCase() + lang.slice(1);
   const { t } = useLanguage();
@@ -99,7 +105,7 @@ function Product({ number, data }) {
 export default function ProductList({ data }) {
   return (
     <ul className={style.productList}>
-      <Product number={12} data={data} />
+      <Product number={data.length} data={data} />
     </ul>
   );
 }
