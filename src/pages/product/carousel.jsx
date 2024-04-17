@@ -28,9 +28,9 @@ const ImageCarousel = ({ images }) => {
               }
             >
               <img
-                src={"../src/assets/notebook/" + image.src}
-                alt={image.alt}
-                style={{ width: "500px", height: "300px" }}
+                src={image}
+                alt={image}
+                style={{ width: "400px", height: "400px" }}
               />
             </li>
           ))}
@@ -45,8 +45,8 @@ const ImageCarousel = ({ images }) => {
                 }
               >
                 <img
-                  src={"/src/assets/notebook/" + image.src}
-                  alt={image.alt}
+                  src={image}
+                  alt={image}
                   className={style.smallBlock + " " + style.smallImg}
                 />
               </li>

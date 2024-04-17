@@ -19,7 +19,6 @@ export default function Search() {
           "http://localhost:8003/api/catalog/api/catalog/smartphones-and-gadgets"
         );
         setProducts(response.data);
-        console.log(response.data);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);

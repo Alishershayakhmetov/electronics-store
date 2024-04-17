@@ -1,9 +1,11 @@
 import { useState, useRef } from "react";
 import style from "./characteristics.module.scss";
+import useLanguage from "../../hooks/language/useLanguage";
 
 export default function Characteristics({ data }) {
   const [collapsed, setCollapsed] = useState(true);
   const stretchButtonRef = useRef(null);
+  const { t } = useLanguage();
 
   const handleStretchToggle = () => {
     setCollapsed(!collapsed);
@@ -27,16 +29,18 @@ export default function Characteristics({ data }) {
         <div className={style.technicalSpecificationBlock}>
           {Object.keys(data).map((key) => (
             <div key={key} className={style.descriptionContainer}>
-              <div className={style.descriptionKey}>{key}</div>
+              <div className={style.descriptionKey}>{t(key)}</div>
               <div style={{ width: "100%" }}>
                 {Object.keys(data[key]).map((name) => (
                   <div key={name} className={style.descriptionItem}>
                     <div className={style.descriptionTitle}>
-                      <p className={style.descriptionText}>{name}</p>
+                      <p className={style.descriptionText}>{t(name)}</p>
                     </div>
                     <div className={style.dots} />
                     <div className={style.descriptionRight}>
-                      <p className={style.descriptionText}>{data[key][name]}</p>
+                      <p className={style.descriptionText}>
+                        {t(data[key][name])}
+                      </p>
                     </div>
                   </div>
                 ))}

@@ -6,6 +6,10 @@ import { initReactI18next } from "react-i18next";
 import translationEN from "./locales/en/translation.json";
 import translationRU from "./locales/ru/translation.json";
 import translationKZ from "./locales/kz/translation.json";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
+import { ApiProvider } from "@reduxjs/toolkit/query/react";
+import { productsApi } from "./store/apiSlice";
 
 const check = localStorage.getItem("preferredLanguage");
 
@@ -40,6 +44,8 @@ i18n
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
