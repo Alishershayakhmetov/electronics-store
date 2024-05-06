@@ -56,7 +56,6 @@ function ProductCarousel({ imageURLs }) {
 }
 
 function Product({ number, data }) {
-  console.log(data);
   if (!data || data.length < number) {
     // If data is undefined or does not have enough items, return null or loading indicator
     return null; // or <div>Loading...</div>

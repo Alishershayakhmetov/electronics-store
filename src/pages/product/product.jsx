@@ -7,7 +7,8 @@ import Characteristics from "./characteristics";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import useLanguage from "../../hooks/language/useLanguage";
-import { useGetProductQuery } from "../../store/productSlice";
+import { useGetProductQuery } from "../../store/slices/productSlice";
+import { useAddToCartMutation } from "../../store/slices/cartSlice";
 
 export default function Product() {
   const urlpath = useLocation().pathname.slice(9);
@@ -15,33 +16,32 @@ export default function Product() {
   let lang = localStorage.getItem("preferredLanguage");
   lang = lang.charAt(0).toUpperCase() + lang.slice(1);
   const { t } = useLanguage();
+  const addToCart = useAddToCartMutation(); // Retrieve the addToCart function from the mutation hook
 
-  // const [product, setProduct] = useState(undefined);
+  // const qwerty = useAddToCartMutation();
+
+  const [cartLoading, setCartLoading] = useState(false);
+
+  async function handleAddToCart(product_id) {
+    try {
+      setCartLoading(true);
+      console.log(product_id);
+      const result = await addToCart[0](product_id); // Call 'addToCart' with productId
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setCartLoading(false);
+    }
+  }
+
   const {
     data: productData,
     error,
     isError,
     isLoading,
   } = useGetProductQuery({ urlpath, lang });
-  /*
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:8003/api/catalog/api/product/${urlpath}/${lang}`
-        );
-        path = ["main", response.data.category];
-        setProduct(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setError("Failed to fetch data. Please try again later.");
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [lang]);
-  */
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -95,6 +95,8 @@ export default function Product() {
               <button
                 className="btn btn-success"
                 style={{ width: "90%", margin: "auto" }}
+                onClick={() => handleAddToCart(productData.product_id)}
+                disabled={cartLoading}
               >
                 Buy
               </button>

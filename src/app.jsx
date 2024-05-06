@@ -8,6 +8,7 @@ import Catalog from "./pages/catalog/catalog";
 import Search from "./pages/search/search";
 import Error404 from "./pages/404page/404comp";
 import AuthWindow from "./pages/login/authWindow";
+import Basket from "./pages/basket/basket";
 
 const App = () => {
   return (
@@ -52,6 +53,17 @@ const App = () => {
             <>
               <Header />
               <Search />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/basket"
+          element={
+            <>
+              <Header />
+              <Basket />
               <Footer />
             </>
           }

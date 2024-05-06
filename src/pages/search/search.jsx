@@ -6,7 +6,7 @@ import Block from "../../components/block";
 import Pagination from "../../components/Pagination/pagination";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useGetCatalogQuery } from "../../store/catalogSlice";
+import { useGetCatalogQuery } from "../../store/slices/catalogSlice";
 import { useLocation, useParams } from "react-router-dom";
 
 export default function Search() {
@@ -25,7 +25,6 @@ export default function Search() {
     isError,
     isLoading,
   } = useGetCatalogQuery({ path, pageNumber });
-  console.log(response);
   /*
   useEffect(() => {
     const fetchData = async () => {
@@ -62,7 +61,7 @@ export default function Search() {
   return (
     <main style={{ padding: "16px 0", backgroundColor: "#F4F4F4" }}>
       <section style={{ maxWidth: "1232px", margin: " auto " }}>
-        <PathMaker path={["main", "smartphones"]} />
+        <PathMaker path={["main", path]} />
         <div className={style.catalogMainDiv}>
           <div className={style.catalogLeftGrid}>
             <Block>

@@ -120,12 +120,12 @@ export default function Header() {
               </div>
               <span>{t("Compare")}</span>
             </a>
-            <a>
+            <Link to={"/basket"}>
               <div className={style.iconDiv}>
                 <img src={basket} height={24} width={25}></img>
               </div>
               <span>{t("Cart")}</span>
-            </a>
+            </Link>
             <a>
               <div className={style.iconDiv}>
                 <img src={profile} height={24} width={25}></img>
