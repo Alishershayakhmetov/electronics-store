@@ -10,11 +10,6 @@ import { useGetCatalogQuery } from "../../store/slices/catalogSlice";
 import { useLocation, useParams } from "react-router-dom";
 
 export default function Search() {
-  /*
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  */
   const path = useLocation().pathname.slice(9);
   const searchParams = new URLSearchParams(useLocation().search);
   const pageNumber = parseInt(searchParams.get("page")) - 1 || 0;
@@ -25,25 +20,7 @@ export default function Search() {
     isError,
     isLoading,
   } = useGetCatalogQuery({ path, pageNumber });
-  /*
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:8003/api/catalog/api/catalog/smartphones-and-gadgets"
-        );
-        setProducts(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setError("Failed to fetch data. Please try again later.");
-        setLoading(false);
-      }
-    };
 
-    fetchData();
-  }, []);
-  */
   if (isLoading) {
     return <div>Loading...</div>;
   }

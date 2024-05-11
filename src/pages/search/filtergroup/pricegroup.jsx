@@ -53,7 +53,7 @@ export default function PriceGroup({ title, data }) {
                   e.target.value === ""
                     ? setValues([0, MAX])
                     : e.target.value[0] === "0"
-                    ? setValues([parseInt(e.target.value.slice(1)), MAX])
+                    ? setValues([0, MAX])
                     : setValues([parseInt(e.target.value), MAX]);
                 }
               }}
@@ -78,7 +78,7 @@ export default function PriceGroup({ title, data }) {
                   e.target.value === ""
                     ? setValues([MIN, 0])
                     : e.target.value[0] === "0"
-                    ? setValues([MIN, parseInt(e.target.value.slice(1))])
+                    ? setValues([MIN, 0])
                     : setValues([MIN, parseInt(e.target.value)]);
                 }
               }}

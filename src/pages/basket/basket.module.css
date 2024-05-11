@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.productList {
+
+}
+.priceBox {
+
+}
+.productListHeader {
+    padding: 0 20px 0 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 4px;
+}
+.productContainer {
+    width: 700px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    position: relative;
+    border-bottom: 1px solid #f0f1f2;
+}
+.productContainer:last-child {
+    border-bottom: none;
+}
+.productListBody {
+    padding: 0 12px;
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.countBox {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 8px;
+    bottom: 12px;
+    justify-content: center;
+    text-align: center;
+}
+.inputBox {
+    width: 26px;
+    height: 26px;
+}
+.amountInput {
+    padding: 0;
+    font-size: 14px;
+    width: 26px;
+    height: 26px;
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #606971;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #d9dcde;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.svgButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 8px;
+}
+.svgButton:active {
+    background-color: #0d3b85;
+}

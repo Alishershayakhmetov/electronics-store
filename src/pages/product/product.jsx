@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ImageCarousel from "./carousel";
 import style from "./product.module.css";
 import PathMaker from "../../components/pathmaker/pathMaker";
 import Description from "./descriptions";
 import Characteristics from "./characteristics";
-import axios from "axios";
 import { useLocation } from "react-router-dom";
 import useLanguage from "../../hooks/language/useLanguage";
 import { useGetProductQuery } from "../../store/slices/productSlice";
@@ -17,8 +16,6 @@ export default function Product() {
   lang = lang.charAt(0).toUpperCase() + lang.slice(1);
   const { t } = useLanguage();
   const addToCart = useAddToCartMutation(); // Retrieve the addToCart function from the mutation hook
-
-  // const qwerty = useAddToCartMutation();
 
   const [cartLoading, setCartLoading] = useState(false);
 

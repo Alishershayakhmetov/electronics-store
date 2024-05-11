@@ -14,7 +14,14 @@ export const cartApi = createApi({
         credentials: "include", // Add credentials option here
       }),
     }),
+    getAllProducts: builder.query({
+      query: (language) => ({
+        url: `/getAllProducts?lang=${language}`,
+        method: "GET",
+        credentials: "include", // Add credentials option here
+      }),
+    }),
   }),
 });
 
-export const { useAddToCartMutation } = cartApi;
+export const { useAddToCartMutation, useGetAllProductsQuery } = cartApi;
