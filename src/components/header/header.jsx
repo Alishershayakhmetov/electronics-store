@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import logo from "/logo-crop-jpeg.jpg";
 import rus from "../../assets/ru.png";
@@ -13,6 +13,55 @@ import style from "./header.module.css";
 import CityModal from "../../layouts/citymodal";
 import useLanguage from "../../hooks/language/useLanguage";
 import { Link } from "react-router-dom";
+
+import { useGetAllProductsQuery } from "../../store/slices/cartSlice";
+import { getPersonLanguage } from "../../utils/getPersonLang";
+
+import { useSelector } from "react-redux";
+
+function GetProductAmount() {
+  const productCount = useSelector((state) => state.productCount.count);
+  const lang = getPersonLanguage();
+  const {
+    data: response,
+    error,
+    isError,
+    isLoading,
+  } = useGetAllProductsQuery(lang);
+  const [data, setData] = useState(response || null);
+
+  useEffect(() => {
+    setData(response);
+  }, [response]);
+
+  if (isLoading || isError) {
+    return null;
+  }
+
+  if (data) {
+    return (
+      <span
+        style={{
+          position: "absolute",
+          top: "-6px",
+          right: "-6px",
+          display: "flex",
+          justifyContent: "center",
+          width: "16px",
+          height: "16px",
+          fontSize: "10px",
+          fontWeight: "600",
+          lineHeight: "1.8em",
+          color: "#fff",
+          backgroundColor: "#2196f3",
+          borderRadius: "50%",
+        }}
+      >
+        {productCount}
+      </span>
+    );
+  }
+}
 
 export default function Header() {
   const [openCityModal, setOpenCityModal] = useState(false);
@@ -120,12 +169,13 @@ export default function Header() {
               </div>
               <span>{t("Compare")}</span>
             </a>
-            <Link to={"/basket"}>
+            <a href={"/basket"} style={{ position: "relative" }}>
               <div className={style.iconDiv}>
                 <img src={basket} height={24} width={25}></img>
               </div>
               <span>{t("Cart")}</span>
-            </Link>
+              <GetProductAmount />
+            </a>
             <a>
               <div className={style.iconDiv}>
                 <img src={profile} height={24} width={25}></img>

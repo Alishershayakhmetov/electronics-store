@@ -8,8 +8,12 @@ import { useLocation } from "react-router-dom";
 import useLanguage from "../../hooks/language/useLanguage";
 import { useGetProductQuery } from "../../store/slices/productSlice";
 import { useAddToCartMutation } from "../../store/slices/cartSlice";
+import { useDispatch } from "react-redux";
+import { increment, decrement } from "../../store/slices/productCountSlice";
+import axios from "axios";
 
 export default function Product() {
+  const dispatch = useDispatch();
   const urlpath = useLocation().pathname.slice(9);
   let path = [];
   let lang = localStorage.getItem("preferredLanguage");
@@ -23,8 +27,32 @@ export default function Product() {
     try {
       setCartLoading(true);
       console.log(product_id);
-      const result = await addToCart[0](product_id); // Call 'addToCart' with productId
-      console.log(result);
+      console.log(lang);
+      console.log(addToCart);
+      // const result = await addToCart[0]({ product_id, lang }); // Call 'addToCart' with productId
+      axios
+        .post(
+          `http://localhost:8003/api/catalog/api/cart/add-to-cart?lang=${lang}`,
+          {
+            product_id: product_id,
+          },
+          {
+            withCredentials: true,
+            headers: {
+              Accept: "text/plain;charset=UTF-8",
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response);
+          if (response.data === "added") {
+            dispatch(increment());
+          } else if (response.data === "removed") {
+            dispatch(decrement());
+          }
+        });
+
+      // window.location.reload();
     } catch (error) {
       console.error(error);
     } finally {

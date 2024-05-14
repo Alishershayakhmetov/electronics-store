@@ -7,11 +7,14 @@ export const cartApi = createApi({
   }),
   endpoints: (builder) => ({
     addToCart: builder.mutation({
-      query: (productId) => ({
-        url: "/add-to-cart",
+      query: ({ product_id, lang }) => ({
+        url: `/add-to-cart?lang=${lang}`,
         method: "POST",
-        body: { productId },
+        body: { product_id },
         credentials: "include", // Add credentials option here
+        headers: {
+          Accept: "text/plain;charset=UTF-8",
+        },
       }),
     }),
     getAllProducts: builder.query({

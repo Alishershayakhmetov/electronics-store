@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./app";
 import i18n from "i18next";
@@ -8,7 +8,9 @@ import translationRU from "./locales/ru/translation.json";
 import translationKZ from "./locales/kz/translation.json";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
-import { ApiProvider } from "@reduxjs/toolkit/query/react";
+import { getPersonLanguage } from "./utils/getPersonLang";
+import { useGetAllProductsQuery } from "./store/slices/cartSlice";
+import { setInitialCount } from "./store/slices/productCountSlice";
 
 const check = localStorage.getItem("preferredLanguage");
 
@@ -41,9 +43,25 @@ i18n
     },
   });
 
+const ProductCountInitializer = () => {
+  const lang = getPersonLanguage();
+  const { data, error } = useGetAllProductsQuery(lang);
+  useEffect(() => {
+    if (data) {
+      const amount = data.reduce((sum, item) => sum + item.selected, 0);
+      store.dispatch(setInitialCount(amount));
+    } else if (error) {
+      console.error("Error fetching product count:", error);
+    }
+  }, [data, error]);
+
+  return null;
+};
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
+      <ProductCountInitializer />
       <App />
     </Provider>
   </React.StrictMode>

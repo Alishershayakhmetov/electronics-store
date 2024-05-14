@@ -4,10 +4,8 @@ import style from "./search.module.css";
 import PathMaker from "../../components/pathmaker/pathMaker";
 import Block from "../../components/block";
 import Pagination from "../../components/Pagination/pagination";
-import axios from "axios";
-import { useState, useEffect } from "react";
 import { useGetCatalogQuery } from "../../store/slices/catalogSlice";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Search() {
   const path = useLocation().pathname.slice(9);
