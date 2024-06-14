@@ -47,7 +47,7 @@ const ProductCountInitializer = () => {
   const lang = getPersonLanguage();
   const { data, error } = useGetAllProductsQuery(lang);
   useEffect(() => {
-    if (data) {
+    if (data && data.message !== "No cookies found") {
       const amount = data.reduce((sum, item) => sum + item.selected, 0);
       store.dispatch(setInitialCount(amount));
     } else if (error) {

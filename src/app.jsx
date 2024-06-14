@@ -9,6 +9,20 @@ import Search from "./pages/search/search";
 import Error404 from "./pages/404page/404comp";
 import AuthWindow from "./pages/login/authWindow";
 import Basket from "./pages/basket/basket";
+import Profile from "./pages/profile/profile";
+import Confirm from "./pages/login/confirm";
+
+// for testing
+import style from "./pages/login/authWindow.module.css";
+function Background({ children }) {
+  return (
+    <div className={style.background}>
+      <div style={{ padding: "2em auto" }}>
+        <div className={style.contentW3ls}>{children}</div>
+      </div>
+    </div>
+  );
+}
 
 const App = () => {
   return (
@@ -37,6 +51,16 @@ const App = () => {
         />
         <Route exact path="/login" element={<AuthWindow />} />
         <Route
+          exact
+          path="/login/confirm"
+          element={
+            <Background>
+              <Confirm />
+            </Background>
+          }
+        />
+
+        <Route
           path="/catalog"
           element={
             <>
@@ -64,6 +88,28 @@ const App = () => {
             <>
               <Header />
               <Basket />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/account"
+          element={
+            <>
+              <Header />
+              <Profile />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/account/:category"
+          element={
+            <>
+              <Header />
+              <Profile />
               <Footer />
             </>
           }

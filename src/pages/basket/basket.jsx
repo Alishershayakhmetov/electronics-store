@@ -134,8 +134,14 @@ export default function Basket() {
       </>
     );
   }
-
-  if (data) {
+  if (data && data.message === "No cookies found") {
+    return (
+      <p>
+        <span>No cookies found</span>
+      </p>
+    );
+  }
+  if (data && data.message !== "No cookies found") {
     return (
       <Block style={{ backgroundColor: "#f0f1f2" }}>
         <main

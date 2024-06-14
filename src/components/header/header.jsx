@@ -39,27 +39,7 @@ function GetProductAmount() {
   }
 
   if (data) {
-    return (
-      <span
-        style={{
-          position: "absolute",
-          top: "-6px",
-          right: "-6px",
-          display: "flex",
-          justifyContent: "center",
-          width: "16px",
-          height: "16px",
-          fontSize: "10px",
-          fontWeight: "600",
-          lineHeight: "1.8em",
-          color: "#fff",
-          backgroundColor: "#2196f3",
-          borderRadius: "50%",
-        }}
-      >
-        {productCount}
-      </span>
-    );
+    return <span className={style.productCounter}>{productCount}</span>;
   }
 }
 
@@ -151,7 +131,24 @@ export default function Header() {
                 className={style.inputInput}
                 placeholder={t("Find...")}
               ></input>
-              <svg></svg>
+              <svg
+                className="svg-icon"
+                style={{
+                  verticalAlign: "middle",
+                  fill: "currentColor",
+                  overflow: "hidden",
+                }}
+                width={24}
+                height={24}
+                viewBox="0 0 1024 1024"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496l-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"
+                  transform="translate(0,-100)"
+                />
+              </svg>
             </label>
           </form>
         </div>
@@ -163,12 +160,6 @@ export default function Header() {
               </div>
               <span>{t("Favourite")}</span>
             </a>
-            <a>
-              <div className={style.iconDiv}>
-                <img src={compare} height={24} width={25}></img>
-              </div>
-              <span>{t("Compare")}</span>
-            </a>
             <a href={"/basket"} style={{ position: "relative" }}>
               <div className={style.iconDiv}>
                 <img src={basket} height={24} width={25}></img>
@@ -176,7 +167,7 @@ export default function Header() {
               <span>{t("Cart")}</span>
               <GetProductAmount />
             </a>
-            <a>
+            <a href="/login">
               <div className={style.iconDiv}>
                 <img src={profile} height={24} width={25}></img>
               </div>
